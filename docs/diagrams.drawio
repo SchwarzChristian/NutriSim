@@ -1,0 +1,299 @@
+<mxfile host="65bd71144e">
+    <diagram id="_4Qxscl8KxDFcGghqFVp" name="Nutritions">
+        <mxGraphModel dx="866" dy="701" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="xNlJhrpEdIG6aKXMhBtq-1" target="xNlJhrpEdIG6aKXMhBtq-2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="80" y="140"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xNlJhrpEdIG6aKXMhBtq-1" target="xNlJhrpEdIG6aKXMhBtq-3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="80" y="460"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xNlJhrpEdIG6aKXMhBtq-1" target="xNlJhrpEdIG6aKXMhBtq-16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="700" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="80" y="700"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-1" value="Nutrition" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xNlJhrpEdIG6aKXMhBtq-2" target="xNlJhrpEdIG6aKXMhBtq-6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xNlJhrpEdIG6aKXMhBtq-2" target="xNlJhrpEdIG6aKXMhBtq-8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="300"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xNlJhrpEdIG6aKXMhBtq-2" target="xNlJhrpEdIG6aKXMhBtq-9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="380"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-2" value="Macro" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="120" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xNlJhrpEdIG6aKXMhBtq-3" target="xNlJhrpEdIG6aKXMhBtq-12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="540"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xNlJhrpEdIG6aKXMhBtq-3" target="xNlJhrpEdIG6aKXMhBtq-13" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="620"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-3" value="Micro" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="440" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-6" value="Carbohydrate&lt;br&gt;digested in stomach&lt;br&gt;absorbed in small intestine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="200" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-8" value="Fat&lt;br&gt;digested in stomach&lt;br&gt;absorbed in small intestine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="280" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-9" value="Protein&lt;br&gt;digested in stomach&lt;br&gt;absorbed in small intestine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="360" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-12" value="Vitamine&lt;br&gt;digested in small intestine&lt;br&gt;absorbed in large intestine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="520" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-13" value="Mineral&lt;br&gt;does not need to be digested&lt;br&gt;absorbed in large intestine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="600" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xNlJhrpEdIG6aKXMhBtq-16" value="Water&lt;br&gt;does not need to be digested&lt;br&gt;absorbed in large intestine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="680" width="160" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="iyHQ-dwRMJEIXTPcaYET" name="Digesting">
+        <mxGraphModel dx="1047" dy="847" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-0"/>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-1" parent="a6kmWVVtBok0m21uVS9C-0"/>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-5" value="" style="edgeStyle=none;html=1;" edge="1" parent="a6kmWVVtBok0m21uVS9C-1" source="a6kmWVVtBok0m21uVS9C-2" target="a6kmWVVtBok0m21uVS9C-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-2" value="Food" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="a6kmWVVtBok0m21uVS9C-1">
+                    <mxGeometry x="160" y="50" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-7" value="" style="edgeStyle=none;html=1;" edge="1" parent="a6kmWVVtBok0m21uVS9C-1" source="a6kmWVVtBok0m21uVS9C-4" target="a6kmWVVtBok0m21uVS9C-6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-4" value="Stomach" style="whiteSpace=wrap;html=1;" vertex="1" parent="a6kmWVVtBok0m21uVS9C-1">
+                    <mxGeometry x="160" y="200" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-9" value="" style="edgeStyle=none;html=1;" edge="1" parent="a6kmWVVtBok0m21uVS9C-1" source="a6kmWVVtBok0m21uVS9C-6" target="a6kmWVVtBok0m21uVS9C-8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="440" as="sourcePoint"/>
+                        <mxPoint x="220" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-6" value="Small Intestine" style="whiteSpace=wrap;html=1;" vertex="1" parent="a6kmWVVtBok0m21uVS9C-1">
+                    <mxGeometry x="160" y="320" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-11" value="" style="edgeStyle=none;html=1;" edge="1" parent="a6kmWVVtBok0m21uVS9C-1" source="a6kmWVVtBok0m21uVS9C-8" target="a6kmWVVtBok0m21uVS9C-10">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="520" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-8" value="Large Intestine" style="whiteSpace=wrap;html=1;" vertex="1" parent="a6kmWVVtBok0m21uVS9C-1">
+                    <mxGeometry x="160" y="440" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-10" value="Rectum" style="whiteSpace=wrap;html=1;" vertex="1" parent="a6kmWVVtBok0m21uVS9C-1">
+                    <mxGeometry x="160" y="560" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-15" style="edgeStyle=none;html=1;" edge="1" parent="a6kmWVVtBok0m21uVS9C-1" source="a6kmWVVtBok0m21uVS9C-14" target="a6kmWVVtBok0m21uVS9C-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-14" value="Digests Food Into Nutritions" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" vertex="1" parent="a6kmWVVtBok0m21uVS9C-1">
+                    <mxGeometry x="360" y="180" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-19" style="edgeStyle=none;html=1;" edge="1" parent="a6kmWVVtBok0m21uVS9C-1" source="a6kmWVVtBok0m21uVS9C-16" target="a6kmWVVtBok0m21uVS9C-6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-16" value="Absorbs some nutritions and further digests others" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" vertex="1" parent="a6kmWVVtBok0m21uVS9C-1">
+                    <mxGeometry x="360" y="300" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-20" style="edgeStyle=none;html=1;" edge="1" parent="a6kmWVVtBok0m21uVS9C-1" source="a6kmWVVtBok0m21uVS9C-17" target="a6kmWVVtBok0m21uVS9C-8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-17" value="Absorbs more nutritions" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" vertex="1" parent="a6kmWVVtBok0m21uVS9C-1">
+                    <mxGeometry x="360" y="420" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-21" style="edgeStyle=none;html=1;" edge="1" parent="a6kmWVVtBok0m21uVS9C-1" source="a6kmWVVtBok0m21uVS9C-18" target="a6kmWVVtBok0m21uVS9C-10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6kmWVVtBok0m21uVS9C-18" value="collects waste ready for disposal" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" vertex="1" parent="a6kmWVVtBok0m21uVS9C-1">
+                    <mxGeometry x="360" y="540" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="XHhh8cZ63wbK2QSTzd7u" name="Nutrition Distribution">
+        <mxGraphModel dx="718" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-0"/>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-1" parent="GVXA5sLUDpfmoQ_hbjsg-0"/>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-4" value="nutritions" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-2" target="GVXA5sLUDpfmoQ_hbjsg-3">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="270" y="170"/>
+                            <mxPoint x="270" y="170"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-2" value="intestines" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="120" y="160" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-6" value="nutritions" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-3" target="GVXA5sLUDpfmoQ_hbjsg-5">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="390" y="170"/>
+                            <mxPoint x="390" y="170"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-9" value="nutritions" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-3" target="GVXA5sLUDpfmoQ_hbjsg-8">
+                    <mxGeometry x="0.2859" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="350" y="250"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-16" value="glycogen and fat" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-3" target="GVXA5sLUDpfmoQ_hbjsg-15">
+                    <mxGeometry x="0.143" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="290" y="250"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-18" value="glycogen" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-3" target="GVXA5sLUDpfmoQ_hbjsg-2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="240" y="190"/>
+                            <mxPoint x="240" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-3" value="blood" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="280" y="160" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-7" value="nutritions" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-5" target="GVXA5sLUDpfmoQ_hbjsg-3">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="400" y="190"/>
+                            <mxPoint x="400" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-5" value="Liver" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="440" y="160" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-10" value="nutritions" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-8" target="GVXA5sLUDpfmoQ_hbjsg-3">
+                    <mxGeometry x="-0.4445" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="330" y="270"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-12" value="water/toxics" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-8" target="GVXA5sLUDpfmoQ_hbjsg-11">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="560" y="250"/>
+                            <mxPoint x="560" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-28" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-27" target="GVXA5sLUDpfmoQ_hbjsg-8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="450" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-8" value="Kidney" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="440" y="240" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-13" value="water" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-11" target="GVXA5sLUDpfmoQ_hbjsg-8">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="560" y="270"/>
+                            <mxPoint x="560" y="270"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-11" value="Bladder" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="600" y="240" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-22" value="fat" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-15" target="GVXA5sLUDpfmoQ_hbjsg-3">
+                    <mxGeometry x="-0.3334" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="310" y="270"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-15" value="Body Parts" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="120" y="240" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-21" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-20" target="GVXA5sLUDpfmoQ_hbjsg-5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-20" value="stores some nutritions and processes stuff" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="420" y="40" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-24" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-23" target="GVXA5sLUDpfmoQ_hbjsg-15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-23" value="do mechanical work and stores fat" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="100" y="320" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-26" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-25" target="GVXA5sLUDpfmoQ_hbjsg-3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-25" value="transports nutritions between organs" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="260" y="40" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-27" value="stores some nutritions and disposes toxics and water" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="420" y="320" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-30" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-29" target="GVXA5sLUDpfmoQ_hbjsg-11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-29" value="stores ready to dispose water and toxics&amp;nbsp;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="580" y="320" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="MIwYS_NpD0uXDGxfr4ZM-0" value="transports nutritions between organs" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                    <mxGeometry x="100" y="40" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
