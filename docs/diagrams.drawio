@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="_4Qxscl8KxDFcGghqFVp" name="Nutritions">
-        <mxGraphModel dx="866" dy="701" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="397" dy="1016" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -92,7 +92,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="iyHQ-dwRMJEIXTPcaYET" name="Digesting">
-        <mxGraphModel dx="1047" dy="847" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="331" dy="847" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="a6kmWVVtBok0m21uVS9C-0"/>
                 <mxCell id="a6kmWVVtBok0m21uVS9C-1" parent="a6kmWVVtBok0m21uVS9C-0"/>
@@ -156,7 +156,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="XHhh8cZ63wbK2QSTzd7u" name="Nutrition Distribution">
-        <mxGraphModel dx="718" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="331" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="GVXA5sLUDpfmoQ_hbjsg-0"/>
                 <mxCell id="GVXA5sLUDpfmoQ_hbjsg-1" parent="GVXA5sLUDpfmoQ_hbjsg-0"/>
@@ -168,7 +168,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-2" value="intestines" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
+                <mxCell id="GVXA5sLUDpfmoQ_hbjsg-2" value="intestines" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="GVXA5sLUDpfmoQ_hbjsg-1">
                     <mxGeometry x="120" y="160" width="80" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="GVXA5sLUDpfmoQ_hbjsg-6" value="nutritions" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="GVXA5sLUDpfmoQ_hbjsg-3" target="GVXA5sLUDpfmoQ_hbjsg-5">

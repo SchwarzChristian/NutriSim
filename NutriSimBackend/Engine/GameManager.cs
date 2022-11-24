@@ -1,14 +1,12 @@
-using NutriSimBackend.Entities;
-
 namespace NutriSimBackend.Engine;
 
-internal class Engine {
-    private static Engine? instance;
-	public static Engine Instance => instance ?? (instance = new Engine());
+internal class GameManager {
+    private static GameManager? instance;
+	public static GameManager Instance => instance ?? (instance = new GameManager());
 
 	private IDictionary<string, Game> games = new Dictionary<string, Game>();
 
-	private Engine() {
+	private GameManager() {
 
 	}
 

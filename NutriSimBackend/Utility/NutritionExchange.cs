@@ -1,17 +1,19 @@
 using NutriSimBackend.Entities;
 using NutriSimBackend.Entities.Units;
 
-namespace NutriSimBackend.Engine.Body;
+namespace NutriSimBackend.Utility;
 
 public class NutritionExchange
 {
-    private readonly NutritionStorage storage;
+	private readonly NutritionStorage storage;
 
-    public NutritionExchange(NutritionStorage storage) {
-        this.storage = storage;
+	public NutritionExchange(NutritionStorage storage)
+	{
+		this.storage = storage;
 	}
 
-	public NutritionStorage GetNutritions(NutritionStorage request) {
+	public NutritionStorage GetNutritions(NutritionStorage request)
+	{
 		return new NutritionStorage
 		{
 			Carbohydrate = GetElement(request.Carbohydrate, storage.Carbohydrate),
@@ -21,10 +23,12 @@ public class NutritionExchange
 			Mineral = GetElement(request.Mineral, storage.Mineral),
 			Water = GetElement(request.Water, storage.Water),
 		};
-
 	}
 
-	private ElementStorage GetElement(ElementStorage request, ElementStorage elementStorage)
+	private ElementStorage GetElement(
+		ElementStorage request,
+		ElementStorage elementStorage
+	)
 	{
 		if (request.Stored == Mass.Empty) return ElementStorage.Empty;
 		if (request.Stored < elementStorage.Stored)
@@ -38,7 +42,8 @@ public class NutritionExchange
 		return ElementStorage.WithAmount(element);
 	}
 
-	public void StoreNutritions(NutritionStorage toStore) {
+	public void StoreNutritions(NutritionStorage toStore)
+	{
 		storage.Carbohydrate.Stored += toStore.Carbohydrate.Stored;
 		storage.Fat.Stored += toStore.Fat.Stored;
 		storage.Protein.Stored += toStore.Protein.Stored;

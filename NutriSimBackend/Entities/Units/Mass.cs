@@ -1,8 +1,9 @@
-using System;
+using System.Text.Json.Serialization;
 
 namespace NutriSimBackend.Entities.Units;
 
-public class Mass {
+[JsonConverter(typeof(UnitConverter<Mass>))]
+public class Mass : IUnit {
 	public double SerializableValue { get; set; }
 	public double InDefaultUnit => InGram;
 
