@@ -1,0 +1,9 @@
+.status-display {
+	width: 100%;
+	height: 100%;
+}
+
+.status-figure {
+	height: 80%;
+	align-self: center;
+}
