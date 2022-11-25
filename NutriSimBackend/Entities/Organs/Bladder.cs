@@ -9,11 +9,11 @@ public class Bladder : IBodyPart
 	public Bladder()
 	{
 		Nutritions = new NutritionStorage();
-		Nutritions.Carbohydrate.Limit = Mass.FromGram(50);
-		Nutritions.Fat.Limit = Mass.FromGram(30);
-		Nutritions.Protein.Limit = Mass.FromGram(10);
-		Nutritions.Vitamin.Limit = Mass.FromMilliGram(10);
-		Nutritions.Mineral.Limit = Mass.FromMilliGram(10);
-		Nutritions.Water.Limit = Mass.FromKiloGram(1);
+		Nutritions.Carbohydrate = ElementStorage.WithLimit(Mass.FromGram(50));
+		Nutritions.Fat = ElementStorage.WithLimit(Mass.FromGram(30));
+		Nutritions.Protein = ElementStorage.WithLimit(Mass.FromGram(10));
+		Nutritions.Vitamin = ElementStorage.WithLimit(Mass.FromMilliGram(10));
+		Nutritions.Mineral = ElementStorage.WithLimit(Mass.FromMilliGram(10));
+		Nutritions.Water = ElementStorage.WithLimit(Mass.FromKiloGram(1));
 	}
 }

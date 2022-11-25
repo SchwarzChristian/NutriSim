@@ -1,3 +1,4 @@
+using System.IO;
 using System.Text.Json;
 using NutriSimBackend.Entities;
 
@@ -9,11 +10,15 @@ internal class Game
 
 	private string saveGameFilename;
 
-	public Game(string saveGameName) {
-		saveGameFilename = $"save/{saveGameName}.json";
-		if (!File.Exists(saveGameFilename))
+	public Game(string playerName) {
+		if (!Directory.Exists("save")) {
+			Directory.CreateDirectory("save");
+		}
+
+		saveGameFilename = $"save/{playerName}.json";
+		if (!File.Exists(playerName))
 		{
-			Player = new Player();
+			Player = new Player { Name = playerName };
 			Save();
 			return;
 		}

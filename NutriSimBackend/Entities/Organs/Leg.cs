@@ -9,11 +9,11 @@ public class Leg : IBodyPart
 	public Leg()
 	{
 		Nutritions = new NutritionStorage();
-		Nutritions.Carbohydrate.Limit = Mass.FromGram(100);
-		Nutritions.Fat.Limit = Mass.FromGram(100);
-		Nutritions.Protein.Limit = Mass.FromGram(100);
-		Nutritions.Vitamin.Limit = Mass.FromMilliGram(200);
-		Nutritions.Mineral.Limit = Mass.FromMilliGram(300);
-		Nutritions.Water.Limit = Mass.FromGram(500);
+		Nutritions.Carbohydrate = ElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Fat = ElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Protein = ElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Vitamin = ElementStorage.WithLimit(Mass.FromMilliGram(200));
+		Nutritions.Mineral = ElementStorage.WithLimit(Mass.FromMilliGram(300));
+		Nutritions.Water = ElementStorage.WithLimit(Mass.FromGram(500));
 	}
 }

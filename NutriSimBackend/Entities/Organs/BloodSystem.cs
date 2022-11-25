@@ -8,11 +8,11 @@ public class BloodSystem : IBodyPart {
 	public BloodSystem()
 	{
 		Nutritions = new NutritionStorage();
-		Nutritions.Carbohydrate.Limit = Mass.FromGram(300);
-		Nutritions.Fat.Limit = Mass.FromGram(100);
-		Nutritions.Protein.Limit = Mass.FromGram(200);
-		Nutritions.Vitamin.Limit = Mass.FromGram(10);
-		Nutritions.Mineral.Limit = Mass.FromGram(10);
-		Nutritions.Water.Limit = Mass.FromKiloGram(2);
+		Nutritions.Carbohydrate = ElementStorage.WithLimit(Mass.FromGram(300));
+		Nutritions.Fat = ElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Protein = ElementStorage.WithLimit(Mass.FromGram(200));
+		Nutritions.Vitamin = ElementStorage.WithLimit(Mass.FromGram(10));
+		Nutritions.Mineral = ElementStorage.WithLimit(Mass.FromGram(10));
+		Nutritions.Water = ElementStorage.WithLimit(Mass.FromKiloGram(2));
 	}
 }

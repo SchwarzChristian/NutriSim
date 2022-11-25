@@ -9,11 +9,11 @@ public class Liver : IBodyPart
 	public Liver()
 	{
 		Nutritions = new NutritionStorage();
-		Nutritions.Carbohydrate.Limit = Mass.FromGram(300);
-		Nutritions.Fat.Limit = Mass.FromGram(500);
-		Nutritions.Protein.Limit = Mass.FromGram(400);
-		Nutritions.Vitamin.Limit = Mass.FromMilliGram(100);
-		Nutritions.Mineral.Limit = Mass.FromMilliGram(300);
-		Nutritions.Water.Limit = Mass.FromGram(800);
+		Nutritions.Carbohydrate = ElementStorage.WithLimit(Mass.FromGram(300));
+		Nutritions.Fat = ElementStorage.WithLimit(Mass.FromGram(500));
+		Nutritions.Protein = ElementStorage.WithLimit(Mass.FromGram(400));
+		Nutritions.Vitamin = ElementStorage.WithLimit(Mass.FromMilliGram(100));
+		Nutritions.Mineral = ElementStorage.WithLimit(Mass.FromMilliGram(300));
+		Nutritions.Water = ElementStorage.WithLimit(Mass.FromGram(800));
 	}
 }

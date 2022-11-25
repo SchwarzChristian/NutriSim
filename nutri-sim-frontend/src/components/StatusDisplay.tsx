@@ -1,5 +1,5 @@
-import status_figure from "./status_figure.svg"
-import "./StatusDisplay.css"
+import status_figure from "../assets/status_figure.svg"
+import "../styles/StatusDisplay.css"
 
 function StatusDisplay() {
 	return <div className="status-display">

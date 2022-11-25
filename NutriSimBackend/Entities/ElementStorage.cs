@@ -1,3 +1,4 @@
+using System;
 using NutriSimBackend.Entities.Units;
 
 namespace NutriSimBackend.Entities;
@@ -6,7 +7,7 @@ public class ElementStorage
 {
 	public static ElementStorage Empty => new ElementStorage();
 
-	public Mass Stored { get; set; } = new Mass();
+	public Mass Stored { get; set; } = Mass.Empty;
 	public Mass Limit { get; set; } = Mass.FromDefaultUnit(1);
 
 	public ElementStorage() : this(null, null) {}
@@ -21,7 +22,9 @@ public class ElementStorage
 	}
 
 	public static ElementStorage WithLimit(Mass limit) {
-		return new ElementStorage(null, limit);
+		// ToDo: just for testing: Remove random value
+		var current = new Random().NextDouble() * limit.InDefaultUnit * 1.2;
+		return new ElementStorage(Mass.FromDefaultUnit(current), limit);
 	}
 
 	public static ElementStorage WithAmount(Mass amount) {

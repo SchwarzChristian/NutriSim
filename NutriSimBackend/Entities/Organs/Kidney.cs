@@ -9,11 +9,11 @@ public class Kidney : IBodyPart
 	public Kidney()
 	{
 		Nutritions = new NutritionStorage();
-		Nutritions.Carbohydrate.Limit = Mass.FromGram(50);
-		Nutritions.Fat.Limit = Mass.FromGram(50);
-		Nutritions.Protein.Limit = Mass.FromGram(50);
-		Nutritions.Vitamin.Limit = Mass.FromMilliGram(800);
-		Nutritions.Mineral.Limit = Mass.FromMilliGram(500);
-		Nutritions.Water.Limit = Mass.FromGram(800);
+		Nutritions.Carbohydrate = ElementStorage.WithLimit(Mass.FromGram(50));
+		Nutritions.Fat = ElementStorage.WithLimit(Mass.FromGram(50));
+		Nutritions.Protein = ElementStorage.WithLimit(Mass.FromGram(50));
+		Nutritions.Vitamin = ElementStorage.WithLimit(Mass.FromMilliGram(800));
+		Nutritions.Mineral = ElementStorage.WithLimit(Mass.FromMilliGram(500));
+		Nutritions.Water = ElementStorage.WithLimit(Mass.FromGram(800));
 	}
 }
