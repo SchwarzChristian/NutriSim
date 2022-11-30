@@ -1,6 +1,6 @@
-import { ElementStorage } from "./ElementStorage";
+import ElementStorage from "./ElementStorage";
 
-export class NutritionStorage {
+export default class NutritionStorage {
     public Carbohydrate: ElementStorage = new ElementStorage();
     public Fat: ElementStorage = new ElementStorage();
     public Protein: ElementStorage = new ElementStorage();

@@ -1,6 +1,6 @@
-import { NutritionStorage } from "./NutritionStorage";
+import NutritionStorage from "./NutritionStorage";
 
-export class BodyPart {
+export default class BodyPart {
     public name: string = "<undefined>";
     public nutritions: NutritionStorage = new NutritionStorage;
 }

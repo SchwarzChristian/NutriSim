@@ -1,9 +1,22 @@
 .status-display {
-	width: 100%;
-	height: 100%;
+	display: flex;
+	background-color: lightblue;
 }
 
 .status-figure {
-	height: 80%;
-	align-self: left;
+	flex-wrap: nowrap;
+	height: 100%;
+}
+
+.body-part-list {
+	margin: 0;
+	padding: 8pt;
+	width: fit-content;
+	min-height: 100%;
+	background-color: rgb(49, 50, 59);
+	list-style-type: none;
+}
+
+.body-part-list>li {
+	margin: 8pt;
 }

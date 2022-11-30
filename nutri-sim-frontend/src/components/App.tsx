@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/App.css';
-import { StatusDisplay } from './StatusDisplay';
+import StatusDisplay from './StatusDisplay';
 
 export default class App extends React.Component {
   public render(): JSX.Element {
