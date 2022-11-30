@@ -1,0 +1,27 @@
+.part-name {
+	font-size: 16pt;
+}
+
+.nutrition-element-name {
+	font-size: medium;
+}
+
+.nutrition-element-value {
+	font-size: medium;
+}
+
+.nutrition-element-low {
+	color: red;
+}
+
+.nutrition-element-ok {
+	color: black;
+}
+
+.nutrition-element-good {
+	color: green;
+}
+
+.nutrition-element-oversaturated {
+	color: orange;
+}

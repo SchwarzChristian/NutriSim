@@ -1,9 +1,6 @@
-class BodyPart {
+import { NutritionStorage } from "./NutritionStorage";
+
+export class BodyPart {
     public name: string = "<undefined>";
-
-    constructor() {
-        
-    }
+    public nutritions: NutritionStorage = new NutritionStorage;
 }
-
-export { BodyPart };
