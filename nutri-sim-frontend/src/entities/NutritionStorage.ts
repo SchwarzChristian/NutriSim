@@ -1,10 +1,10 @@
 import ElementStorage from "./ElementStorage";
 
 export default class NutritionStorage {
-    public Carbohydrate: ElementStorage = new ElementStorage();
-    public Fat: ElementStorage = new ElementStorage();
-    public Protein: ElementStorage = new ElementStorage();
-    public Vitamin: ElementStorage = new ElementStorage();
-    public Mineral: ElementStorage = new ElementStorage();
-    public Water: ElementStorage = new ElementStorage();
+    public carbohydrate: ElementStorage = new ElementStorage();
+    public fat: ElementStorage = new ElementStorage();
+    public protein: ElementStorage = new ElementStorage();
+    public vitamin: ElementStorage = new ElementStorage();
+    public mineral: ElementStorage = new ElementStorage();
+    public water: ElementStorage = new ElementStorage();
 }

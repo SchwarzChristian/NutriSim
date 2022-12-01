@@ -4,6 +4,7 @@ import ElementStorage from "../entities/ElementStorage";
 import "../styles/BodyPartInfo.css";
 
 interface Props {
+    partName: string;
     part: BodyPart;
 }
 
@@ -26,23 +27,21 @@ export default class BodyPartInfo extends React.Component<Props, State> {
     public render(): JSX.Element {
         var nutritions = this.props.part.nutritions;
 
-        var tag = <></>;
-
         return <table className="body-part-info" onClick={this.toogleIsExpanded}>
             <thead>
                 <tr>
                     <th colSpan={2} className="part-name">
-                        {this.props.part.name}
+                        {this.props.partName}
                     </th>
                 </tr>
             </thead>
             <tbody hidden={!this.state.isExpanded}>
-                {this.buildRow("Carbohydrate", nutritions.Carbohydrate)}
-                {this.buildRow("Fat", nutritions.Fat)}
-                {this.buildRow("Protein", nutritions.Protein)}
-                {this.buildRow("Vitamin", nutritions.Vitamin)}
-                {this.buildRow("Mineral", nutritions.Mineral)}
-                {this.buildRow("Water", nutritions.Water)}
+                {this.buildRow("Carbohydrate", nutritions.carbohydrate)}
+                {this.buildRow("Fat", nutritions.fat)}
+                {this.buildRow("Protein", nutritions.protein)}
+                {this.buildRow("Vitamin", nutritions.vitamin)}
+                {this.buildRow("Mineral", nutritions.mineral)}
+                {this.buildRow("Water", nutritions.water)}
             </tbody>
         </table>
     }
@@ -74,13 +73,18 @@ export default class BodyPartInfo extends React.Component<Props, State> {
         if (percentage > 0.8) className = "good";
         if (percentage > 1) className = "oversaturated";
 
-        var valueString = `${data.stored} / ${data.limit} (${percentage.toString(2)}%)`
+        percentage = this.round(percentage);
+        var valueString = `${this.round(data.stored)} / ${data.limit} (${percentage.toString()}%)`
         return <tr className={"nutrition-element-row nutrition-element-" + className}>
             <th className="nutrition-element-name">{name}</th>
             <td className="nutrition-element-value">
                 {valueString}
             </td>
         </tr>
+    }
 
+    private round(input: number, digits: number = 2): number {
+        var multiplier = Math.pow(10, digits);
+        return Math.round(input * multiplier) / multiplier;
     }
 }

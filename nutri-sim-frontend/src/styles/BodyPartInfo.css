@@ -2,7 +2,7 @@
 	background-color: darkslateblue;
 	border: medium solid black;
 	border-radius: 20pt;
-	min-width: 200pt;
+	min-width: 250pt;
 }
 
 .body-part-info>thead th {
@@ -32,11 +32,11 @@
 }
 
 .nutrition-element-ok {
-	color: black;
+	color: white;
 }
 
 .nutrition-element-good {
-	color: green;
+	color: lime;
 }
 
 .nutrition-element-oversaturated {
