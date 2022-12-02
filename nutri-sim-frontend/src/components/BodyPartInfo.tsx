@@ -2,6 +2,9 @@ import React from "react";
 import BodyPart from "../entities/BodyPart";
 import ElementStorage from "../entities/ElementStorage";
 import "../styles/BodyPartInfo.css";
+import WeightFormatter from "../utils/formatter/WeightFormatter";
+import MathExtensions from "../utils/MathExtensions";
+import ElementStorageDisplay from "./ElementStorageDisplay";
 
 interface Props {
     partName: string;
@@ -14,7 +17,7 @@ interface State {
 
 export default class BodyPartInfo extends React.Component<Props, State> {
     public state: State;
-
+    
     constructor(props: Props) {
         super(props);
         this.state = {
@@ -66,25 +69,13 @@ export default class BodyPartInfo extends React.Component<Props, State> {
     }
 
     private buildRow(name: string, data: ElementStorage): JSX.Element {
-        var percentage = data.stored / data.limit;
-        var className = "low";
-        
-        if (percentage > 0.1) className = "ok";
-        if (percentage > 0.8) className = "good";
-        if (percentage > 1) className = "oversaturated";
-
-        percentage = this.round(percentage);
-        var valueString = `${this.round(data.stored)} / ${data.limit} (${percentage.toString()}%)`
-        return <tr className={"nutrition-element-row nutrition-element-" + className}>
+        return <tr>
             <th className="nutrition-element-name">{name}</th>
             <td className="nutrition-element-value">
-                {valueString}
+                <ElementStorageDisplay storage={data} />
             </td>
         </tr>
     }
 
-    private round(input: number, digits: number = 2): number {
-        var multiplier = Math.pow(10, digits);
-        return Math.round(input * multiplier) / multiplier;
-    }
+
 }

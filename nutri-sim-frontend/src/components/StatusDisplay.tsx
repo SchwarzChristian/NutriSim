@@ -8,20 +8,24 @@ interface IProps {
 	player?: Player;
 }
 
-export default class StatusDisplay extends React.Component<IProps> {
+interface IState {
+
+}
+
+export default class StatusDisplay extends React.Component<IProps, IState> {
 	public render(): JSX.Element {
 		var player = this.props.player;
 		if (player === undefined) return <></>;
 		console.log(player);
 		return <div className="status-display">
 			<ul className="body-part-list">
-				<BodyPartInfo partName="Blood System" part={player.bloodSystem} />
-				<BodyPartInfo partName="Body" part={player.body} />
-				<BodyPartInfo partName="Arms" part={player.arm} />
-				<BodyPartInfo partName="Legs" part={player.leg} />
-				<BodyPartInfo partName="Liver" part={player.liver} />
-				<BodyPartInfo partName="Kidneys" part={player.kidney} />
-				<BodyPartInfo partName="Bladder" part={player.bladder} />
+				<li><BodyPartInfo partName="Blood System" part={player.bloodSystem} /></li>
+				<li><BodyPartInfo partName="Body" part={player.body} /></li>
+				<li><BodyPartInfo partName="Arms" part={player.arm} /></li>
+				<li><BodyPartInfo partName="Legs" part={player.leg} /></li>
+				<li><BodyPartInfo partName="Liver" part={player.liver} /></li>
+				<li><BodyPartInfo partName="Kidneys" part={player.kidney} /></li>
+				<li><BodyPartInfo partName="Bladder" part={player.bladder} /></li>
 			</ul>
 			<p className="spacing" />
 			<img src={status_figure} className="status-figure" alt="status figure" />
