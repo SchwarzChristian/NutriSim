@@ -1,59 +1,47 @@
-import React, { createRef, MutableRefObject } from 'react';
+import "../styles/App.css";
+import React from 'react';
 import Player from '../entities/Player';
-import '../styles/App.css';
-import GameApi from '../utils/backendApi/GameApi';
-import StatusDisplay from './StatusDisplay';
+import Login from "./Login";
+import MainView from "./MainView";
+import { fu } from "../utils/componentUtils";
+import { Box, Center, ChakraProvider, CSSReset, Flex, Heading, theme } from "@chakra-ui/react";
 
-interface IProps {
+interface Props {
 
 }
 
-interface IState {
-  playerName?: string;
-  player?: Player;
-}
+export default class App extends React.Component<Props> {
+    private player?: Player;
 
-export default class App extends React.Component<IProps, IState> {
-  public state: Readonly<IState> = {};
-  
-  private loadGameInputRef = createRef<HTMLInputElement>();
-  private statusDisplayRef = createRef<StatusDisplay>();
-  private gameApi: GameApi = new GameApi();
-
-  constructor(props: IProps) {
-    super(props);
-
-    this.loadGame = this.loadGame.bind(this);
-  }
-
-  public render(): JSX.Element {
-    var header: JSX.Element;
-    if (this.state.player === undefined) {
-      header = <>
-        <input type="text" ref={this.loadGameInputRef}></input>
-        <button onClick={this.loadGame}>Load Game</button>
-      </>;
-    } else {
-      header = <h1>{ this.state.player.name }</h1>
+    public constructor(props: Props) {
+        super(props);
     }
 
-    return (
-      <div className="App">
-        <header className="App-header">
-          {header}
-        </header>
-        <StatusDisplay player={this.state.player} ref={this.statusDisplayRef} />
-      </div>
-    );
-  }
+    public render(): JSX.Element {
+        var content: JSX.Element;
+        if (this.player == null) {
+            content = <Login onLoadGame={player => this.player = fu(this, player)} />
+        } else {
+            content = <MainView player={this.player} />
+        }
 
-  private loadGame(): void {
-    if (this.loadGameInputRef.current === undefined) {
-      throw new Error("load game input field not found");
+        return <ChakraProvider theme={theme}>
+            <CSSReset />
+            <Flex
+                direction="column"
+                justifyContent="center"
+                alignItems="stretch"
+                height="100vh"
+            >
+                <Flex direction="column" className="app-title" alignItems="center">
+                    <Heading size="xl">NutriSim</Heading>
+                    <Heading size="s">{this.player?.name ?? "Select Player"}</Heading>
+                </Flex>
+                <Box className="app-title-separator" width="100vw" height="20pt" />
+                <Center flexGrow={1} className="app-main-content" width="100vw">
+                    {content}
+                </Center>
+            </Flex>
+        </ChakraProvider>;
     }
-
-    var playerName = this.loadGameInputRef.current!.value;
-    this.gameApi.loadGame(playerName)
-      .then(player => this.setState({ player }));
-  }
 }

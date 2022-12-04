@@ -1,5 +1,6 @@
 import NutritionStorage from "./NutritionStorage";
 
-export default class BodyPart {
-    public nutritions: NutritionStorage = new NutritionStorage;
+export default interface BodyPart {
+    name: string;
+    nutritions: NutritionStorage;
 }

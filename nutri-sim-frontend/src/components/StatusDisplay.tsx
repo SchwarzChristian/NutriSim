@@ -1,34 +1,51 @@
 import React from "react"
-import status_figure from "../assets/liver/liver.initial.webp"
+import BodyPart from "../entities/BodyPart";
 import Player from "../entities/Player"
-import "../styles/StatusDisplay.css"
 import BodyPartInfo from "./BodyPartInfo";
+import bladder from "../assets/bladder/bladder.final.webp";
+import kidney from "../assets/kidney/kidney.final.webp";
+import liver from "../assets/liver/liver.final.webp";
+import none from "../assets/liver/liver.initial.webp";
+import { Accordion, Box, Flex, Image } from "@chakra-ui/react";
 
-interface IProps {
+interface Props {
 	player?: Player;
 }
 
-interface IState {
+export default class StatusDisplay extends React.Component<Props> {
+	private partInfoRefs: Array<BodyPartInfo | null> = [];
+	private selected?: BodyPart;
+	private imageMap = {
+		none,
+		bladder,
+		kidney,
+		liver,
+	}
 
-}
-
-export default class StatusDisplay extends React.Component<IProps, IState> {
 	public render(): JSX.Element {
 		var player = this.props.player;
 		if (player === undefined) return <></>;
-		console.log(player);
-		return <div className="status-display">
-			<ul className="body-part-list">
-				<li><BodyPartInfo partName="Blood System" part={player.bloodSystem} /></li>
-				<li><BodyPartInfo partName="Body" part={player.body} /></li>
-				<li><BodyPartInfo partName="Arms" part={player.arm} /></li>
-				<li><BodyPartInfo partName="Legs" part={player.leg} /></li>
-				<li><BodyPartInfo partName="Liver" part={player.liver} /></li>
-				<li><BodyPartInfo partName="Kidneys" part={player.kidney} /></li>
-				<li><BodyPartInfo partName="Bladder" part={player.bladder} /></li>
-			</ul>
-			<p className="spacing" />
-			<img src={status_figure} className="status-figure" alt="status figure" />
-		</div>
+
+		this.partInfoRefs = [];
+		var partInfos = player.bodyParts.map((it, key) => <BodyPartInfo
+			part={it}
+			ref={ref => this.partInfoRefs[key] = ref}
+		/>);
+
+		return <Flex direction="row" width="100%">
+			<Accordion maxHeight="800px" overflow="auto">
+				{partInfos}
+			</Accordion>
+			<Box flexGrow={1} color="transparent" />
+			<Image src={this.getImage()} alt="status figure" />
+		</Flex>
+	}
+
+	private getImage(): string {
+		if (this.selected === undefined) return this.imageMap.none;
+		if (this.selected.name === "Bladder") return this.imageMap.bladder;
+		if (this.selected.name === "Kidney") return this.imageMap.kidney;
+		if (this.selected.name === "Liver") return this.imageMap.liver;
+		return this.imageMap.none;
 	}
 }

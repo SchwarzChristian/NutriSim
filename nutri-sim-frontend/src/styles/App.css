@@ -1,20 +1,11 @@
-.App {
-  text-align: center;
-  height: 100vh;
-  background-color: lightcyan;
+.app-title {
+	background-color: darkslategray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-title-separator {
+	background-image: linear-gradient(darkslategray, slategray);
 }
 
-.spacing {
-  flex-grow: 1;
+.app-main-content {
+	background-color: slategray;
 }

@@ -28,6 +28,14 @@
 			"name": ".NET Core Attach",
 			"type": "coreclr",
 			"request": "attach"
+		},
+		{
+			"name": "Launch Chrome",
+			"request": "launch",
+			"type": "chrome",
+			"url": "http://localhost:3001",
+			"webRoot": "${workspaceFolder}/nutri-sim-frontend"
 		}
+	
 	]
 }

@@ -1,81 +1,99 @@
+import { AccordionButton, AccordionItem, AccordionPanel, Box, Flex, Heading, HStack, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import BodyPart from "../entities/BodyPart";
 import ElementStorage from "../entities/ElementStorage";
-import "../styles/BodyPartInfo.css";
-import WeightFormatter from "../utils/formatter/WeightFormatter";
-import MathExtensions from "../utils/MathExtensions";
+import NutritionStorage from "../entities/NutritionStorage";
+import ElementStorageFormatter from "../utils/formatter/ElementStorageFormatter";
 import ElementStorageDisplay from "./ElementStorageDisplay";
+import iconStatusLow from "../assets/icons/statusLow.svg";
+import iconStatusOk from "../assets/icons/statusOk.svg";
+import iconStatusGood from "../assets/icons/statusGood.svg";
+import iconStatusOversaturated from "../assets/icons/statusOversaturated.svg";
 
 interface Props {
-    partName: string;
     part: BodyPart;
+    onShow?: Function;
+    onHide?: Function;
 }
 
-interface State {
-    isExpanded: boolean;
-}
-
-export default class BodyPartInfo extends React.Component<Props, State> {
-    public state: State;
-    
-    constructor(props: Props) {
+export default class BodyPartInfo extends React.Component<Props> {
+    public constructor(props: Props) {
         super(props);
-        this.state = {
-            isExpanded: false
-        }
-
-        this.toogleIsExpanded = this.toogleIsExpanded.bind(this);
     }
 
     public render(): JSX.Element {
-        var nutritions = this.props.part.nutritions;
+        var nutritions: NutritionStorage = this.props.part.nutritions;
+        var status: IStatusLevelCounts = {
+            low: 0,
+            ok: 0,
+            good: 0,
+            oversaturated: 0,
+        };
+        
+        [
+            nutritions.carbohydrate,
+            nutritions.fat,
+            nutritions.protein,
+            nutritions.vitamin,
+            nutritions.mineral,
+            nutritions.water,
+        ].forEach(element => this.countStatus(status, element));
 
-        return <table className="body-part-info" onClick={this.toogleIsExpanded}>
-            <thead>
-                <tr>
-                    <th colSpan={2} className="part-name">
-                        {this.props.partName}
-                    </th>
-                </tr>
-            </thead>
-            <tbody hidden={!this.state.isExpanded}>
-                {this.buildRow("Carbohydrate", nutritions.carbohydrate)}
-                {this.buildRow("Fat", nutritions.fat)}
-                {this.buildRow("Protein", nutritions.protein)}
-                {this.buildRow("Vitamin", nutritions.vitamin)}
-                {this.buildRow("Mineral", nutritions.mineral)}
-                {this.buildRow("Water", nutritions.water)}
-            </tbody>
-        </table>
+        return <>
+            <AccordionItem>
+                <AccordionButton>
+                    <Flex alignItems="center" width="100%">
+                        <Heading size="l">{this.props.part.name}</Heading>
+                        <Box flexGrow={1} />
+                        <HStack>
+                            {this.buildStatus(status.low, iconStatusLow)}
+                            {this.buildStatus(status.ok, iconStatusOk)}
+                            {this.buildStatus(status.good, iconStatusGood)}
+                            {this.buildStatus(status.oversaturated, iconStatusOversaturated)}
+                        </HStack>
+                    </Flex>
+                </AccordionButton>
+                <AccordionPanel>
+                    <SimpleGrid columns={3} spacing="8pt">
+                        {this.buildRow("Carbohydrate", nutritions.carbohydrate)}
+                        {this.buildRow("Fat", nutritions.fat)}
+                        {this.buildRow("Protein", nutritions.protein)}
+                        {this.buildRow("Vitamin", nutritions.vitamin)}
+                        {this.buildRow("Mineral", nutritions.mineral)}
+                        {this.buildRow("Water", nutritions.water)}
+                    </SimpleGrid>
+                </AccordionPanel>
+            </AccordionItem>
+        </>;
     }
 
-    public toogleIsExpanded(): void {
-        if (this.state.isExpanded) this.hide();
-        else this.show();
-    }
-
-    public show(): void {
-        this.setIsExpanded(true);
-    }
-
-    public hide(): void {
-        this.setIsExpanded(false);
-    }
-
-    public setIsExpanded(value: boolean): void {
-        var state = this.state;
-        state.isExpanded = value;
-        this.setState(state);
+    private buildStatus(count: number, icon: string) : JSX.Element {
+        if (count < 1) return <></>;
+        return <Box>
+            <Image src={icon} width="16pt" />
+            {count}
+        </Box>
     }
 
     private buildRow(name: string, data: ElementStorage): JSX.Element {
-        return <tr>
-            <th className="nutrition-element-name">{name}</th>
-            <td className="nutrition-element-value">
-                <ElementStorageDisplay storage={data} />
-            </td>
-        </tr>
+         return <Box>
+             <ElementStorageDisplay storage={data} />
+             <Text textAlign="center">{name}</Text>
+         </Box>
     }
 
+    private countStatus(status: IStatusLevelCounts, element: ElementStorage) {
+        var formatter = new ElementStorageFormatter(element);
+        if (formatter.isLow) status.low += 1;
+        if (formatter.isOk) status.ok += 1;
+        if (formatter.isGood) status.good += 1;
+        if (formatter.isOversaturated) status.oversaturated += 1;
+    }
+}
 
+interface IStatusLevelCounts {
+    low: number;
+    ok: number;
+    good: number;
+    oversaturated: number;
 }

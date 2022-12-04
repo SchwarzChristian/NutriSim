@@ -1,36 +1,52 @@
+import "../styles/ElementStorageDisplay.css"
 import React from "react";
 import ElementStorage from "../entities/ElementStorage";
 import WeightFormatter from "../utils/formatter/WeightFormatter";
-import MathExtensions from "../utils/MathExtensions";
+import ElementStorageFormatter from "../utils/formatter/ElementStorageFormatter";
+import { CircularProgress, CircularProgressLabel, Divider, Flex, Text, VStack } from "@chakra-ui/react";
+import PercentageFormatter from "../utils/formatter/percentageFormatter";
 
 interface IProps {
     storage: ElementStorage;
 }
 
-interface IState {
-
-}
-
-export default class ElementStorageDisplay extends React.Component<IProps, IState> {
-    private math = new MathExtensions();
+export default class ElementStorageDisplay extends React.Component<IProps> {
     private weightFormatter = new WeightFormatter();
 
     public render(): JSX.Element {
-        var data = this.props.storage;
-        var percentage = data.stored / data.limit;
-        var className = "low";
-        
-        if (percentage > 0.1) className = "ok";
-        if (percentage > 0.8) className = "good";
-        if (percentage > 1) className = "oversaturated";
+        var element = this.props.storage;
+        var className = "status-undefined";
+        var formatter = new ElementStorageFormatter(element);
+        var percentage = formatter.percentage;
 
-        percentage = this.math.round(percentage);
-        var stored = this.weightFormatter.format(data.stored);
-        var limit = this.weightFormatter.format(data.limit);
-        var valueString = `${stored} / ${limit} (${percentage.toString()}%)`
+        if (formatter.isLow) className = "status-low";
+        else if (formatter.isOk) className = "status-ok";
+        else if (formatter.isGood) className = "status-good";
+        else if (formatter.isOversaturated) {
+            className = "status-oversaturated";
+            percentage = percentage - 100;
+        }
 
-        return <p className="element-storage">
-            {valueString}
-        </p>;
+        var stored = this.weightFormatter.format(element.stored);
+        var limit = this.weightFormatter.format(element.limit);
+
+        var formattedPercentage = new PercentageFormatter().format(percentage);
+        return <CircularProgress
+            className={className}
+            value={percentage}
+            size="70pt"
+        >
+            <CircularProgressLabel>
+                <VStack spacing="0" width="100%">
+                    <Text fontSize="8pt">{stored}</Text>
+                    <Flex width="100%" alignItems="center">
+                        <Divider width="8pt" marginLeft="10pt" />
+                        <Text fontSize="8pt" flexGrow="1" noOfLines={1} >{formattedPercentage}</Text>
+                        <Divider width="8pt" marginRight="10pt" />
+                    </Flex>
+                    <Text fontSize="8pt">{limit}</Text>
+                </VStack>
+            </CircularProgressLabel>
+        </CircularProgress>;
     }
 }
