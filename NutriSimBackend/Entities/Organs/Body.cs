@@ -9,11 +9,11 @@ public class Body : IBodyPart
 	public Body()
 	{
 		Nutritions = new NutritionStorage();
-		Nutritions.Carbohydrate = ElementStorage.WithLimit(Mass.FromGram(100));
-		Nutritions.Fat = ElementStorage.WithLimit(Mass.FromGram(100));
-		Nutritions.Protein = ElementStorage.WithLimit(Mass.FromGram(100));
-		Nutritions.Vitamin = ElementStorage.WithLimit(Mass.FromMilliGram(200));
-		Nutritions.Mineral = ElementStorage.WithLimit(Mass.FromMilliGram(300));
-		Nutritions.Water = ElementStorage.WithLimit(Mass.FromGram(500));
+		Nutritions.Carbohydrate = NutritionElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Fat = NutritionElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Protein = NutritionElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Vitamin = NutritionElementStorage.WithLimit(Mass.FromMilliGram(200));
+		Nutritions.Mineral = NutritionElementStorage.WithLimit(Mass.FromMilliGram(300));
+		Nutritions.Water = NutritionElementStorage.WithLimit(Mass.FromGram(500));
 	}
 }

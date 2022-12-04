@@ -18,7 +18,10 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 app.UseCors(
-    options => options.WithOrigins("*").AllowAnyMethod()
+    options => options
+        .WithOrigins("*")
+        .AllowAnyMethod()
+        .WithHeaders("Content-Type")
 );
 app.UseAuthorization();
 app.MapControllers();

@@ -3,12 +3,12 @@ import BodyPart from "../../entities/BodyPart";
 import NutritionStorage from "../../entities/NutritionStorage";
 import Player from "../../entities/Player";
 
-export default class GameApi {
-	private endpoint = "http://localhost:5169/Game";
+export default class PlayerApi {
+	private endpoint = "http://localhost:5169/Player";
 
-	public async loadGame(playerName: string): Promise<Player> {
+	public async getPlayer(playerName: string): Promise<Player> {
 		var response = await axios.get<PlayerBackend>(
-			`${this.endpoint}/player/${playerName}`,
+			`${this.endpoint}/${playerName}`,
 			{ params: { playerName } }
 		);
 		return this.mapFromBackendPlayer(response.data);
@@ -36,8 +36,8 @@ export default class GameApi {
 		}
 	}
 
-	public async getGames(): Promise<string[]> {
-		var response = await axios.get<string[]>(`${this.endpoint}/player`);
+	public async getPlayerNames(): Promise<string[]> {
+		var response = await axios.get<string[]>(`${this.endpoint}/names`);
 		return response.data;
 	}
 }

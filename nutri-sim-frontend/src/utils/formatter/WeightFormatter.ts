@@ -13,15 +13,15 @@ export default class WeightFormatter {
         } else if (weight < 1) {
             factor = 1_000;
             unit = "mg";
-        } else if (weight > 1_000) {
+        } else if (weight >= 1_000) {
             factor = 1 / 1_000;
             unit = "kg";
-        } else if (weight > 1_000_000) {
+        } else if (weight >= 1_000_000) {
             factor = 1 / 1_000_000;
             unit = "t";
         }
         
-        return `${math.round(weight * factor)} ${unit}`;
+        return `${(weight * factor).toFixed(2)} ${unit}`;
     }
 
 

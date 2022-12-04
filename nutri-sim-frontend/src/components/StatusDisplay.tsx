@@ -29,6 +29,7 @@ export default class StatusDisplay extends React.Component<Props> {
 		this.partInfoRefs = [];
 		var partInfos = player.bodyParts.map((it, key) => <BodyPartInfo
 			part={it}
+			key={key}
 			ref={ref => this.partInfoRefs[key] = ref}
 		/>);
 

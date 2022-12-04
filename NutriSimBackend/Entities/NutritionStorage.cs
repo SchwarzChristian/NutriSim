@@ -8,10 +8,10 @@ namespace NutriSimBackend.Entities;
 
 public class NutritionStorage
 {
-	public ElementStorage Carbohydrate { get; set; } = new ElementStorage();
-	public ElementStorage Fat { get; set; } = new ElementStorage();
-	public ElementStorage Protein { get; set; } = new ElementStorage();
-	public ElementStorage Vitamin { get; set; } = new ElementStorage();
-	public ElementStorage Mineral { get; set; } = new ElementStorage();
-	public ElementStorage Water { get; set; } = new ElementStorage();
+	public NutritionElementStorage Carbohydrate { get; set; } = new NutritionElementStorage();
+	public NutritionElementStorage Fat { get; set; } = new NutritionElementStorage();
+	public NutritionElementStorage Protein { get; set; } = new NutritionElementStorage();
+	public NutritionElementStorage Vitamin { get; set; } = new NutritionElementStorage();
+	public NutritionElementStorage Mineral { get; set; } = new NutritionElementStorage();
+	public NutritionElementStorage Water { get; set; } = new NutritionElementStorage();
 }

@@ -25,21 +25,21 @@ public class NutritionExchange
 		};
 	}
 
-	private ElementStorage GetElement(
-		ElementStorage request,
-		ElementStorage elementStorage
+	private NutritionElementStorage GetElement(
+		NutritionElementStorage request,
+		NutritionElementStorage elementStorage
 	)
 	{
-		if (request.Stored == Mass.Empty) return ElementStorage.Empty;
+		if (request.Stored == Mass.Empty) return NutritionElementStorage.Empty;
 		if (request.Stored < elementStorage.Stored)
 		{
 			elementStorage.Stored -= request.Stored;
-			return ElementStorage.WithAmount(request.Stored);
+			return NutritionElementStorage.WithAmount(request.Stored);
 		}
 
 		var element = elementStorage.Stored;
 		elementStorage.Stored = Mass.Empty;
-		return ElementStorage.WithAmount(element);
+		return NutritionElementStorage.WithAmount(element);
 	}
 
 	public void StoreNutritions(NutritionStorage toStore)
