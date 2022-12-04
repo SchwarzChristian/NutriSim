@@ -1,4 +1,3 @@
-using System.IO;
 using System.Text.Json;
 using NutriSimBackend.Entities;
 
@@ -10,25 +9,40 @@ internal class Game
 
 	private string saveGameFilename;
 
-	public Game(string playerName) {
-		if (!Directory.Exists("save")) {
-			Directory.CreateDirectory("save");
+	public static Game CreateGame(string playerName) {
+		if (File.Exists(playerName)) {
+			var filename = $"save/{playerName}.json";
+			return Game.LoadGame(filename);
 		}
 
-		saveGameFilename = $"save/{playerName}.json";
-		if (!File.Exists(playerName))
-		{
-			Player = new Player { Name = playerName };
-			Save();
-			return;
-		}
+		var game = new Game(new Player { Name = playerName });
+		game.Save();
+		return game;
+	}
 
-		var fileContent = File.ReadAllText(saveGameFilename);
-		Player = JsonSerializer.Deserialize<Player>(fileContent) ??
-			throw new InvalidOperationException($"failed to read {saveGameFilename}");
+	public static Game LoadGame(string filename) {
+		if (!File.Exists(filename)) {
+			throw new FileNotFoundException($"File '{filename}' not found");
+		}
+		
+		var fileContent = File.ReadAllText(filename);
+		var player = JsonSerializer.Deserialize<Player>(fileContent) ??
+			throw new InvalidOperationException($"failed to read {filename}");
+
+		return new Game(player);
+	}
+
+	public Game(Player player) {
+		Player = player;
+		saveGameFilename = $"save/{player.Name}.json";
 	}
 
 	public void Save() {
+		if (!Directory.Exists("save"))
+		{
+			Directory.CreateDirectory("save");
+		}
+
 		var serialized = JsonSerializer.Serialize(Player);
 		File.WriteAllText(saveGameFilename, serialized);
 	}

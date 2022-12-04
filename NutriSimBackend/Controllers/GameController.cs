@@ -13,8 +13,14 @@ public class GameController : ControllerBase {
         this.logger = logger;
     }
 
-	[HttpGet(Name = "GetPlayer/{name}")]
+	[HttpGet("player/{playerName}")]
 	public Player GetPlayer(string playerName) {
 		return GameManager.Instance.GetGame(playerName).Player;
+	}
+
+	[HttpGet("player")]
+	public ICollection<string> GetPlayerNames()
+	{
+		return GameManager.Instance.GetGames();
 	}
 }

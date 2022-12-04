@@ -18,6 +18,7 @@ export default class ElementStorageDisplay extends React.Component<IProps> {
         var className = "status-undefined";
         var formatter = new ElementStorageFormatter(element);
         var percentage = formatter.percentage;
+        var formattedPercentage = new PercentageFormatter().format(percentage);
 
         if (formatter.isLow) className = "status-low";
         else if (formatter.isOk) className = "status-ok";
@@ -30,7 +31,6 @@ export default class ElementStorageDisplay extends React.Component<IProps> {
         var stored = this.weightFormatter.format(element.stored);
         var limit = this.weightFormatter.format(element.limit);
 
-        var formattedPercentage = new PercentageFormatter().format(percentage);
         return <CircularProgress
             className={className}
             value={percentage}

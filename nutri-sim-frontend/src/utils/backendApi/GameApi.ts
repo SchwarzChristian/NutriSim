@@ -7,7 +7,10 @@ export default class GameApi {
 	private endpoint = "http://localhost:5169/Game";
 
 	public async loadGame(playerName: string): Promise<Player> {
-		var response = await axios.get<PlayerBackend>(this.endpoint, { params: { playerName } })
+		var response = await axios.get<PlayerBackend>(
+			`${this.endpoint}/player/${playerName}`,
+			{ params: { playerName } }
+		);
 		return this.mapFromBackendPlayer(response.data);
 	}
 
@@ -31,6 +34,11 @@ export default class GameApi {
 			name,
 			nutritions: input.nutritions,
 		}
+	}
+
+	public async getGames(): Promise<string[]> {
+		var response = await axios.get<string[]>(`${this.endpoint}/player`);
+		return response.data;
 	}
 }
 
