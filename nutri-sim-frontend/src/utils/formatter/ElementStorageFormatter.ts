@@ -1,10 +1,12 @@
 import ElementStorage from "../../entities/ElementStorage";
 
 export default class ElementStorageFormatter {
-	private value: ElementStorage;
+    private value: ElementStorage;
+    private isInverted: boolean;
 
-	constructor(value: ElementStorage) {
-		this.value = value;
+	constructor(value: ElementStorage, isInverted: boolean = false) {
+        this.value = value;
+        this.isInverted = isInverted;
 	}
 
     public get percentage(): number {
@@ -12,6 +14,7 @@ export default class ElementStorageFormatter {
     }
 
     public get isLow(): boolean {
+        if (this.isInverted) return this.percentage > 80 && this.percentage <= 100;
         return this.percentage <= 20;
     }
 
@@ -22,6 +25,7 @@ export default class ElementStorageFormatter {
     }
 
     public get isGood(): boolean {
+        if (this.isInverted) return this.percentage <= 20;
         if (this.percentage <= 80) return false;
         if (this.percentage > 100) return false;
         return true;

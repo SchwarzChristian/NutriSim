@@ -14,4 +14,6 @@ public class NutritionStorage
 	public NutritionElementStorage Vitamin { get; set; } = new NutritionElementStorage();
 	public NutritionElementStorage Mineral { get; set; } = new NutritionElementStorage();
 	public NutritionElementStorage Water { get; set; } = new NutritionElementStorage();
+	public NutritionElementStorage Waste { get; set; } = new NutritionElementStorage();
+	public NutritionElementStorage Toxic { get; set; } = new NutritionElementStorage();
 }

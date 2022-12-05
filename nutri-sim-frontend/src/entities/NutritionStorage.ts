@@ -8,4 +8,6 @@ export default interface NutritionStorage {
     vitamin: ElementStorage;
     mineral: ElementStorage;
     water: ElementStorage;
+    waste: ElementStorage;
+    toxic: ElementStorage;
 }

@@ -22,6 +22,8 @@ public class NutritionExchange
 			Vitamin = GetElement(request.Vitamin, storage.Vitamin),
 			Mineral = GetElement(request.Mineral, storage.Mineral),
 			Water = GetElement(request.Water, storage.Water),
+			Waste = GetElement(request.Waste, storage.Waste),
+			Toxic = GetElement(request.Toxic, storage.Toxic),
 		};
 	}
 
@@ -50,5 +52,7 @@ public class NutritionExchange
 		storage.Vitamin.Stored += toStore.Vitamin.Stored;
 		storage.Mineral.Stored += toStore.Mineral.Stored;
 		storage.Water.Stored += toStore.Water.Stored;
+		storage.Waste.Stored += toStore.Waste.Stored;
+		storage.Toxic.Stored += toStore.Toxic.Stored;
 	}
 }

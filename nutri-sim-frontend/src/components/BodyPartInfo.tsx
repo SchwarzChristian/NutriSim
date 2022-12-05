@@ -38,6 +38,10 @@ export default class BodyPartInfo extends React.Component<Props> {
             nutritions.mineral,
             nutritions.water,
         ].forEach(element => this.countStatus(status, element));
+        [
+            nutritions.waste,
+            nutritions.toxic,
+        ].forEach(element => this.countStatus(status, element, true));
 
         return <>
             <AccordionItem>
@@ -54,13 +58,15 @@ export default class BodyPartInfo extends React.Component<Props> {
                     </Flex>
                 </AccordionButton>
                 <AccordionPanel>
-                    <SimpleGrid columns={3} spacing="8pt">
+                    <SimpleGrid columns={4} spacing="8pt">
                         {this.buildRow("Carbohydrate", nutritions.carbohydrate)}
                         {this.buildRow("Fat", nutritions.fat)}
                         {this.buildRow("Protein", nutritions.protein)}
                         {this.buildRow("Vitamin", nutritions.vitamin)}
                         {this.buildRow("Mineral", nutritions.mineral)}
                         {this.buildRow("Water", nutritions.water)}
+                        {this.buildRow("Waste", nutritions.waste, true)}
+                        {this.buildRow("Toxic", nutritions.toxic, true)}
                     </SimpleGrid>
                 </AccordionPanel>
             </AccordionItem>
@@ -75,15 +81,15 @@ export default class BodyPartInfo extends React.Component<Props> {
         </Box>
     }
 
-    private buildRow(name: string, data: ElementStorage): JSX.Element {
+    private buildRow(name: string, data: ElementStorage, doInvert: boolean = false): JSX.Element {
          return <Box>
-             <ElementStorageDisplay storage={data} />
+             <ElementStorageDisplay storage={data} doInvert={doInvert} />
              <Text textAlign="center">{name}</Text>
          </Box>
     }
 
-    private countStatus(status: IStatusLevelCounts, element: ElementStorage) {
-        var formatter = new ElementStorageFormatter(element);
+    private countStatus(status: IStatusLevelCounts, element: ElementStorage, doInvert: boolean = false) {
+        var formatter = new ElementStorageFormatter(element, doInvert);
         if (formatter.isLow) status.low += 1;
         if (formatter.isOk) status.ok += 1;
         if (formatter.isGood) status.good += 1;

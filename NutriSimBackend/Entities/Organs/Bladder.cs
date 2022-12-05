@@ -15,5 +15,7 @@ public class Bladder : IBodyPart
 		Nutritions.Vitamin = NutritionElementStorage.WithLimit(Mass.FromMilliGram(10));
 		Nutritions.Mineral = NutritionElementStorage.WithLimit(Mass.FromMilliGram(10));
 		Nutritions.Water = NutritionElementStorage.WithLimit(Mass.FromKiloGram(1));
+		Nutritions.Waste = NutritionElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Toxic = NutritionElementStorage.WithLimit(Mass.FromGram(100));
 	}
 }

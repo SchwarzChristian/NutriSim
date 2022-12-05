@@ -15,5 +15,7 @@ public class Kidney : IBodyPart
 		Nutritions.Vitamin = NutritionElementStorage.WithLimit(Mass.FromMilliGram(800));
 		Nutritions.Mineral = NutritionElementStorage.WithLimit(Mass.FromMilliGram(500));
 		Nutritions.Water = NutritionElementStorage.WithLimit(Mass.FromGram(800));
+		Nutritions.Waste = NutritionElementStorage.WithLimit(Mass.FromGram(200));
+		Nutritions.Toxic = NutritionElementStorage.WithLimit(Mass.FromGram(100));
 	}
 }

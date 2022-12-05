@@ -14,5 +14,7 @@ public class BloodSystem : IBodyPart {
 		Nutritions.Vitamin = NutritionElementStorage.WithLimit(Mass.FromGram(10));
 		Nutritions.Mineral = NutritionElementStorage.WithLimit(Mass.FromGram(10));
 		Nutritions.Water = NutritionElementStorage.WithLimit(Mass.FromKiloGram(2));
+		Nutritions.Waste = NutritionElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Toxic = NutritionElementStorage.WithLimit(Mass.FromGram(100));
 	}
 }

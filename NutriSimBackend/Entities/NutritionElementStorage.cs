@@ -1,4 +1,3 @@
-using System;
 using NutriSimBackend.Entities.Units;
 
 namespace NutriSimBackend.Entities;
@@ -22,8 +21,8 @@ public class NutritionElementStorage
 	}
 
 	public static NutritionElementStorage WithLimit(Mass limit) {
-		var current = limit.InDefaultUnit / 2;
-		//var current = new Random().NextDouble() * limit.InDefaultUnit * 1.2;
+		//var current = limit.InDefaultUnit / 2;
+		var current = new Random().NextDouble() * limit.InDefaultUnit * 1.2;
 		return new NutritionElementStorage(Mass.FromDefaultUnit(current), limit);
 	}
 

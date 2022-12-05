@@ -15,5 +15,7 @@ public class Liver : IBodyPart
 		Nutritions.Vitamin = NutritionElementStorage.WithLimit(Mass.FromMilliGram(100));
 		Nutritions.Mineral = NutritionElementStorage.WithLimit(Mass.FromMilliGram(300));
 		Nutritions.Water = NutritionElementStorage.WithLimit(Mass.FromGram(800));
+		Nutritions.Waste = NutritionElementStorage.WithLimit(Mass.FromGram(100));
+		Nutritions.Toxic = NutritionElementStorage.WithLimit(Mass.FromGram(100));
 	}
 }

@@ -8,6 +8,7 @@ import PercentageFormatter from "../utils/formatter/percentageFormatter";
 
 interface IProps {
     storage: ElementStorage;
+    doInvert: boolean;
 }
 
 export default class ElementStorageDisplay extends React.Component<IProps> {
@@ -20,9 +21,10 @@ export default class ElementStorageDisplay extends React.Component<IProps> {
         var percentage = formatter.percentage;
         var formattedPercentage = new PercentageFormatter().format(percentage);
 
-        if (formatter.isLow) className = "status-low";
+        var doInvert = this.props.doInvert;
+        if (formatter.isLow) className = doInvert ? "status-good" : "status-low";
         else if (formatter.isOk) className = "status-ok";
-        else if (formatter.isGood) className = "status-good";
+        else if (formatter.isGood) className = doInvert ? "status-low" : "status-good";
         else if (formatter.isOversaturated) {
             className = "status-oversaturated";
             percentage = percentage - 100;
