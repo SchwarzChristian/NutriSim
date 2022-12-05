@@ -2,5 +2,5 @@ namespace NutriSimBackend.Entities;
 
 public class JsonList<T>
 {
-    public ICollection<T> Data { get; set; }
+	public ICollection<T> Data { get; set; } = Array.Empty<T>();
 }

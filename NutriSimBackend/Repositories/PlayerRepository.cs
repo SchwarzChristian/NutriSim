@@ -28,7 +28,7 @@ internal class PlayerRepository
 			var fileContent = File.ReadAllText(saveGameFile);
 			var player = JsonSerializer.Deserialize<Player>(fileContent) ??
 				throw new InvalidOperationException($"failed to read {saveGameFile}");
-			players.Add(player.Name, player);
+			AddPlayer(player);
 		}
 	}
 
@@ -40,8 +40,22 @@ internal class PlayerRepository
 		}
 
 		var player = new Player { Name = playerName };
-		players.Add(playerName, player);
+		AddPlayer(player);
 		return player;
+	}
+
+	private void AddPlayer(Player player)
+	{
+		players[player.Name] = player;
+		Save();
+	}
+
+	private void Save() {
+		foreach (var player in players.Values)
+		{
+			var serialized = JsonSerializer.Serialize(player);
+			File.WriteAllText($"save/{player.Name}.json", serialized);
+		}
 	}
 
 	internal ICollection<string> GetPlayerNames()
