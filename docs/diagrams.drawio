@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="_4Qxscl8KxDFcGghqFVp" name="Nutritions">
-        <mxGraphModel dx="1578" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="660" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -92,7 +92,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="iyHQ-dwRMJEIXTPcaYET" name="Digesting">
-        <mxGraphModel dx="1578" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="660" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="a6kmWVVtBok0m21uVS9C-0"/>
                 <mxCell id="a6kmWVVtBok0m21uVS9C-1" parent="a6kmWVVtBok0m21uVS9C-0"/>
@@ -156,7 +156,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="XHhh8cZ63wbK2QSTzd7u" name="Nutrition Distribution">
-        <mxGraphModel dx="1578" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="660" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="GVXA5sLUDpfmoQ_hbjsg-0"/>
                 <mxCell id="GVXA5sLUDpfmoQ_hbjsg-1" parent="GVXA5sLUDpfmoQ_hbjsg-0"/>
@@ -290,7 +290,7 @@
                 <mxCell id="GVXA5sLUDpfmoQ_hbjsg-29" value="stores ready to dispose water and toxics&amp;nbsp;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="GVXA5sLUDpfmoQ_hbjsg-1" vertex="1">
                     <mxGeometry x="580" y="320" width="120" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="95valNIgKvRqxH28wzGn-1" style="edgeStyle=none;html=1;" edge="1" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="MIwYS_NpD0uXDGxfr4ZM-0" target="GVXA5sLUDpfmoQ_hbjsg-2">
+                <mxCell id="95valNIgKvRqxH28wzGn-1" style="edgeStyle=none;html=1;" parent="GVXA5sLUDpfmoQ_hbjsg-1" source="MIwYS_NpD0uXDGxfr4ZM-0" target="GVXA5sLUDpfmoQ_hbjsg-2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="MIwYS_NpD0uXDGxfr4ZM-0" value="absorbs nutritions from food" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="GVXA5sLUDpfmoQ_hbjsg-1" vertex="1">

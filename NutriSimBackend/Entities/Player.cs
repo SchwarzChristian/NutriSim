@@ -11,4 +11,11 @@ public class Player {
 	public Bladder Bladder { get; init; } = new Bladder();
 	public Kidney Kidney { get; init; } = new Kidney();
 	public Liver Liver { get; init; } = new Liver();
+	public Stomach Stomach { get; init; } = new Stomach();
+	public SmallIntestine SmallIntestine { get; init; } = new SmallIntestine();
+	public LargeIntestine LargeIntestine { get; init; } = new LargeIntestine();
+	public Head Head { get; init; } = new Head();
+	public Heart Heart { get; init; } = new Heart();
+	public Lung Lung { get; init; } = new Lung();
+	public Rectum Rectum { get; init; } = new Rectum(); 
 }

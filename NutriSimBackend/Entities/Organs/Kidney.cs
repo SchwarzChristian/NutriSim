@@ -2,7 +2,7 @@ using NutriSimBackend.Entities.Units;
 
 namespace NutriSimBackend.Entities.Organs;
 
-public class Kidney : IBodyPart
+public class Kidney : IOrgan
 {
 	public NutritionStorage Nutritions { get; private set; }
 

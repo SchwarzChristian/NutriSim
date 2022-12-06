@@ -1,10 +1,10 @@
-import ElementStorage from "../../entities/ElementStorage";
+import Storage from "../../entities/Storage";
 
-export default class ElementStorageFormatter {
-    private value: ElementStorage;
+export default class StorageFormatter {
+    private value: Storage;
     private isInverted: boolean;
 
-	constructor(value: ElementStorage, isInverted: boolean = false) {
+	constructor(value: Storage, isInverted: boolean = false) {
         this.value = value;
         this.isInverted = isInverted;
 	}

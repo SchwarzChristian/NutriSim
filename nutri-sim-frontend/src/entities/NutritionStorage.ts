@@ -1,13 +1,13 @@
-import ElementStorage from "./ElementStorage";
+import Storage from "./Storage";
 
 export default interface NutritionStorage {
     name: string,
-    carbohydrate: ElementStorage;
-    fat: ElementStorage;
-    protein: ElementStorage;
-    vitamin: ElementStorage;
-    mineral: ElementStorage;
-    water: ElementStorage;
-    waste: ElementStorage;
-    toxic: ElementStorage;
+    carbohydrate: Storage;
+    fat: Storage;
+    protein: Storage;
+    vitamin: Storage;
+    mineral: Storage;
+    water: Storage;
+    waste: Storage;
+    toxic: Storage;
 }

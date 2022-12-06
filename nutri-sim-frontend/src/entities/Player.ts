@@ -1,6 +1,8 @@
 import BodyPart from "./BodyPart";
+import FoodStorage from "./FoodStorage";
 
 export default interface Player {
 	name: string;
-	bodyParts: Array<BodyPart>;
+	organs: BodyPart[];
+	foodStorages: FoodStorage[];
 }

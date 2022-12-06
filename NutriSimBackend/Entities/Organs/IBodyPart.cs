@@ -1,6 +1,5 @@
 namespace NutriSimBackend.Entities.Organs;
 
-public interface IBodyPart
-{
+public interface IOrgan {
 	public NutritionStorage Nutritions { get; }
 }

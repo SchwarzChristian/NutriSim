@@ -1,19 +1,20 @@
 import React from "react"
 import BodyPart from "../entities/BodyPart";
 import Player from "../entities/Player"
-import BodyPartInfo from "./BodyPartInfo";
+import OrganInfo from "./OrganInfo";
 import bladder from "../assets/bladder/bladder.final.webp";
 import kidney from "../assets/kidney/kidney.final.webp";
 import liver from "../assets/liver/liver.final.webp";
 import none from "../assets/liver/liver.initial.webp";
-import { Accordion, Box, Flex, Image } from "@chakra-ui/react";
+import { Accordion, Box, Flex, Heading, Image, VStack } from "@chakra-ui/react";
+import FoodStorageInfo from "./FoodStorageInfo";
 
 interface Props {
 	player?: Player;
 }
 
 export default class StatusDisplay extends React.Component<Props> {
-	private partInfoRefs: Array<BodyPartInfo | null> = [];
+	private organInfoRefs: Array<OrganInfo | null> = [];
 	private selected?: BodyPart;
 	private imageMap = {
 		none,
@@ -26,19 +27,34 @@ export default class StatusDisplay extends React.Component<Props> {
 		var player = this.props.player;
 		if (player === undefined) return <></>;
 
-		this.partInfoRefs = [];
-		var partInfos = player.bodyParts.map((it, key) => <BodyPartInfo
+		this.organInfoRefs = [];
+		var organInfos = player.organs.map((it, key) => <OrganInfo
 			part={it}
 			key={key}
-			ref={ref => this.partInfoRefs[key] = ref}
+			ref={ref => this.organInfoRefs[key] = ref}
+		/>);
+
+		var foodStorageInfos = player.foodStorages.map((it, key) => <FoodStorageInfo
+			foodStorage={it}
+			key={key}
 		/>);
 
 		return <Flex direction="row" width="100%">
-			<Accordion maxHeight="800px" overflow="auto">
-				{partInfos}
-			</Accordion>
+			<VStack>
+				<Heading size="xl">Digestive System</Heading>
+				<Accordion maxHeight="800px" overflow="auto">
+					{foodStorageInfos}
+				</Accordion>
+			</VStack>
 			<Box flexGrow={1} color="transparent" />
 			<Image src={this.getImage()} alt="status figure" />
+			<Box flexGrow={1} color="transparent" />
+			<VStack>
+				<Heading size="xl">Organs</Heading>
+				<Accordion maxHeight="800px" overflow="auto">
+					{organInfos}
+				</Accordion>
+			</VStack>
 		</Flex>
 	}
 

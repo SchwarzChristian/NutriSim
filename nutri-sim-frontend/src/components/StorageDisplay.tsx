@@ -1,14 +1,14 @@
 import "../styles/ElementStorageDisplay.css"
 import React from "react";
-import ElementStorage from "../entities/ElementStorage";
 import WeightFormatter from "../utils/formatter/WeightFormatter";
-import ElementStorageFormatter from "../utils/formatter/ElementStorageFormatter";
+import Storage from "../entities/Storage";
+import StorageFormatter from "../utils/formatter/StorageFormatter";
 import { CircularProgress, CircularProgressLabel, Divider, Flex, Text, VStack } from "@chakra-ui/react";
 import PercentageFormatter from "../utils/formatter/percentageFormatter";
 
 interface IProps {
-    storage: ElementStorage;
-    doInvert: boolean;
+    storage: Storage;
+    doInvert?: boolean;
 }
 
 export default class ElementStorageDisplay extends React.Component<IProps> {
@@ -17,11 +17,11 @@ export default class ElementStorageDisplay extends React.Component<IProps> {
     public render(): JSX.Element {
         var element = this.props.storage;
         var className = "status-undefined";
-        var formatter = new ElementStorageFormatter(element);
+        var formatter = new StorageFormatter(element);
         var percentage = formatter.percentage;
         var formattedPercentage = new PercentageFormatter().format(percentage);
 
-        var doInvert = this.props.doInvert;
+        var doInvert = this.props.doInvert ?? false;
         if (formatter.isLow) className = doInvert ? "status-good" : "status-low";
         else if (formatter.isOk) className = "status-ok";
         else if (formatter.isGood) className = doInvert ? "status-low" : "status-good";

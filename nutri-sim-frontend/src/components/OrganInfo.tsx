@@ -1,10 +1,10 @@
 import { AccordionButton, AccordionItem, AccordionPanel, Box, Flex, Heading, HStack, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import BodyPart from "../entities/BodyPart";
-import ElementStorage from "../entities/ElementStorage";
+import Storage from "../entities/Storage";
 import NutritionStorage from "../entities/NutritionStorage";
-import ElementStorageFormatter from "../utils/formatter/ElementStorageFormatter";
-import ElementStorageDisplay from "./ElementStorageDisplay";
+import StorageFormatter from "../utils/formatter/StorageFormatter";
+import StorageDisplay from "./StorageDisplay";
 import iconStatusLow from "../assets/icons/statusLow.svg";
 import iconStatusOk from "../assets/icons/statusOk.svg";
 import iconStatusGood from "../assets/icons/statusGood.svg";
@@ -12,11 +12,9 @@ import iconStatusOversaturated from "../assets/icons/statusOversaturated.svg";
 
 interface Props {
     part: BodyPart;
-    onShow?: Function;
-    onHide?: Function;
 }
 
-export default class BodyPartInfo extends React.Component<Props> {
+export default class OrganInfo extends React.Component<Props> {
     public constructor(props: Props) {
         super(props);
     }
@@ -46,7 +44,7 @@ export default class BodyPartInfo extends React.Component<Props> {
         return <>
             <AccordionItem>
                 <AccordionButton>
-                    <Flex alignItems="center" width="100%">
+                    <Flex alignItems="center" width="100%" minWidth="300pt">
                         <Heading size="l">{this.props.part.name}</Heading>
                         <Box flexGrow={1} />
                         <HStack>
@@ -81,15 +79,15 @@ export default class BodyPartInfo extends React.Component<Props> {
         </Box>
     }
 
-    private buildRow(name: string, data: ElementStorage, doInvert: boolean = false): JSX.Element {
+    private buildRow(name: string, data: Storage, doInvert: boolean = false): JSX.Element {
          return <Box>
-             <ElementStorageDisplay storage={data} doInvert={doInvert} />
+             <StorageDisplay storage={data} doInvert={doInvert} />
              <Text textAlign="center">{name}</Text>
          </Box>
     }
 
-    private countStatus(status: IStatusLevelCounts, element: ElementStorage, doInvert: boolean = false) {
-        var formatter = new ElementStorageFormatter(element, doInvert);
+    private countStatus(status: IStatusLevelCounts, element: Storage, doInvert: boolean = false) {
+        var formatter = new StorageFormatter(element, doInvert);
         if (formatter.isLow) status.low += 1;
         if (formatter.isOk) status.ok += 1;
         if (formatter.isGood) status.good += 1;
