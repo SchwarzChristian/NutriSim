@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using System.Text.Json;
 using NutriSimBackend.Entities;
 
@@ -8,7 +9,7 @@ internal class PlayerRepository
 	private static PlayerRepository? instance;
 	public static PlayerRepository Instance => instance ??= new PlayerRepository();
 
-	private IDictionary<string, Player> players = new Dictionary<string, Player>();
+	private IDictionary<string, Player> players = new ConcurrentDictionary<string, Player>();
 
 	private PlayerRepository()
 	{
@@ -61,5 +62,13 @@ internal class PlayerRepository
 	internal ICollection<string> GetPlayerNames()
 	{
 		return players.Keys;
+	}
+
+	internal void DeletePlayer(string playerName)
+	{
+		players.Remove(playerName);
+		var filename = $"save/{playerName}.json";
+		if (File.Exists(filename)) File.Delete(filename);
+		Save();
 	}
 }

@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using System.Text.Json;
 using NutriSimBackend.Entities;
 
@@ -8,7 +9,7 @@ public class FoodRepository
 	private static FoodRepository? instance;
 	public static FoodRepository Instance => instance ??= new FoodRepository();
 	
-	private IDictionary<string, Food> foods = new Dictionary<string, Food>();
+	private IDictionary<string, Food> foods = new ConcurrentDictionary<string, Food>();
 
 	private FoodRepository() {
 		LoadFoods();

@@ -23,4 +23,10 @@ public class PlayerController : ControllerBase {
 	{
 		return PlayerRepository.Instance.GetPlayerNames();
 	}
+
+	[HttpDelete("{playerName}")]
+	public void DeletePlayer(string playerName)
+	{
+		PlayerRepository.Instance.DeletePlayer(playerName);
+	}
 }

@@ -1,4 +1,4 @@
-import { Center, InputGroup, Input, InputRightElement, Button, VStack, Card, CardBody, Heading, Divider } from "@chakra-ui/react"
+import { Center, InputGroup, Input, InputRightElement, Button, VStack, Card, CardBody, Heading, Divider, HStack, Flex } from "@chakra-ui/react"
 import React from "react";
 import Player from "../entities/Player";
 import PlayerApi from "../utils/backendApi/PlayerApi";
@@ -11,7 +11,7 @@ interface Props {
 export default class Login extends React.Component<Props> {
 	private loadGameInput?: HTMLInputElement | null;
 	private gameApi: PlayerApi = new PlayerApi();
-	private gameNames: string[] = [];
+	private playerNames: string[] = [];
 	private isNamesRequested: boolean = false;
 
 	public constructor(props: Props) {
@@ -23,7 +23,7 @@ export default class Login extends React.Component<Props> {
 
 	public render() {
 		if (!this.isNamesRequested) {
-			this.gameApi.getPlayerNames().then(games => this.gameNames = fu(this, games));
+			this.gameApi.getPlayerNames().then(playerNames => this.playerNames = fu(this, playerNames));
 			this.isNamesRequested = true;
 		}
 		
@@ -31,12 +31,16 @@ export default class Login extends React.Component<Props> {
 			<VStack width="100%">
 				<Heading size="xl">Login</Heading>
 				<Divider />
-				{this.gameNames.map(game =>
-					<Button
-						key={game}
-						width="100%"
-						onClick={() => this.loadGame(game)}
-					>{game}</Button>
+				{this.playerNames.map(playerName =>
+					<Flex width="100%" key={playerName}>
+						<Button
+							flexGrow="1"
+							onClick={() => this.loadGame(playerName)}
+						>{playerName}</Button>
+						<Button
+							onClick={() => this.deletePlayer(playerName)}
+						>X</Button>
+					</Flex>
 				)}
 				<InputGroup width="fit-content">
 					<Input
@@ -67,5 +71,12 @@ export default class Login extends React.Component<Props> {
 	
 		this.gameApi.getPlayer(playerName!)
 			.then(player => this.props.onLoadGame(player));
-	  }
+	}
+
+	private deletePlayer(playerName: string): void {
+		this.gameApi.deletePlayer(playerName)
+			.then(() => this.gameApi.getPlayerNames())
+			.then(playerNames => this.playerNames = fu(this, playerNames))
+			.then(() => this.forceUpdate());
+	}
 }

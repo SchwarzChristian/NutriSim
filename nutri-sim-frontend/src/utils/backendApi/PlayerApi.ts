@@ -40,6 +40,10 @@ export default class PlayerApi {
 		var response = await axios.get<string[]>(`${this.endpoint}/names`);
 		return response.data;
 	}
+
+	public async deletePlayer(playerName: string): Promise<void> {
+		await axios.delete(`${this.endpoint}/${playerName}`);
+	}
 }
 
 interface BodyPartBackend {
