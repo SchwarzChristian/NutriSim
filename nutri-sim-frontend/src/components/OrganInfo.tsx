@@ -4,7 +4,7 @@ import BodyPart from "../entities/BodyPart";
 import Storage from "../entities/Storage";
 import NutritionStorage from "../entities/NutritionStorage";
 import StorageFormatter from "../utils/formatter/StorageFormatter";
-import StorageDisplay from "./StorageDisplay";
+import StorageDisplay, { StorageType } from "./StorageDisplay";
 import iconStatusLow from "../assets/icons/statusLow.svg";
 import iconStatusOk from "../assets/icons/statusOk.svg";
 import iconStatusGood from "../assets/icons/statusGood.svg";
@@ -80,17 +80,18 @@ export default class OrganInfo extends React.Component<Props> {
     }
 
     private buildRow(name: string, data: Storage, doInvert: boolean = false): JSX.Element {
-         return <Box>
-             <StorageDisplay storage={data} doInvert={doInvert} />
-             <Text textAlign="center">{name}</Text>
-         </Box>
+        var storageType = doInvert ? StorageType.EmptyDesired : StorageType.FullDesired;
+        return <Box>
+            <StorageDisplay storage={data} storageType={storageType} />
+            <Text textAlign="center">{name}</Text>
+        </Box>
     }
 
     private countStatus(status: IStatusLevelCounts, element: Storage, doInvert: boolean = false) {
         var formatter = new StorageFormatter(element, doInvert);
         if (formatter.isLow) status.low += 1;
-        if (formatter.isOk) status.ok += 1;
-        if (formatter.isGood) status.good += 1;
+        if (formatter.isMedium) status.ok += 1;
+        if (formatter.isHigh) status.good += 1;
         if (formatter.isOversaturated) status.oversaturated += 1;
     }
 }

@@ -18,13 +18,13 @@ export default class StorageFormatter {
         return this.percentage <= 20;
     }
 
-    public get isOk(): boolean {
+    public get isMedium(): boolean {
         if (this.percentage <= 20) return false;
         if (this.percentage > 80) return false;
         return true;
     }
 
-    public get isGood(): boolean {
+    public get isHigh(): boolean {
         if (this.isInverted) return this.percentage <= 20;
         if (this.percentage <= 80) return false;
         if (this.percentage > 100) return false;

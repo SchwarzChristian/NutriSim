@@ -1,16 +1,16 @@
-.status-low .chakra-progress__track {
+.status-bad .chakra-progress__track {
 	stroke: lightpink;
 }
 
-.status-low .chakra-progress__indicator {
+.status-bad .chakra-progress__indicator {
 	stroke: red;
 }
 
-.status-ok .chakra-progress__track {
+.status-medium .chakra-progress__track {
 	stroke: lightblue
 }
 
-.status-ok .chakra-progress__indicator {
+.status-medium .chakra-progress__indicator {
 	stroke: blue;
 }
 

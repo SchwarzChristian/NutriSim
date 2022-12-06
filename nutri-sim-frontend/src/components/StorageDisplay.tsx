@@ -1,4 +1,4 @@
-import "../styles/ElementStorageDisplay.css"
+import "../styles/StorageDisplay.css"
 import React from "react";
 import WeightFormatter from "../utils/formatter/WeightFormatter";
 import Storage from "../entities/Storage";
@@ -8,11 +8,37 @@ import PercentageFormatter from "../utils/formatter/percentageFormatter";
 
 interface IProps {
     storage: Storage;
-    doInvert?: boolean;
+    storageType?: StorageType;
+}
+
+export enum StorageType {
+    EmptyDesired = -1,
+    Neutral = 0,
+    FullDesired = 1,
 }
 
 export default class ElementStorageDisplay extends React.Component<IProps> {
     private weightFormatter = new WeightFormatter();
+
+    private get lowClass(): string {
+        if (this.props.storageType === StorageType.EmptyDesired) return "status-good";
+        else if (this.props.storageType === StorageType.FullDesired) return "status-bad";
+        else return "status-medium";
+    }
+
+    private get mediumClass(): string {
+        return "status-medium";
+    }
+
+    private get highClass(): string {
+        if (this.props.storageType === StorageType.EmptyDesired) return "status-bad";
+        else if (this.props.storageType === StorageType.FullDesired) return "status-good";
+        else return "status-medium";
+    }
+
+    private get oversaturatedClass(): string {
+        return "status-oversaturated";
+    }
 
     public render(): JSX.Element {
         var element = this.props.storage;
@@ -21,12 +47,11 @@ export default class ElementStorageDisplay extends React.Component<IProps> {
         var percentage = formatter.percentage;
         var formattedPercentage = new PercentageFormatter().format(percentage);
 
-        var doInvert = this.props.doInvert ?? false;
-        if (formatter.isLow) className = doInvert ? "status-good" : "status-low";
-        else if (formatter.isOk) className = "status-ok";
-        else if (formatter.isGood) className = doInvert ? "status-low" : "status-good";
+        if (formatter.isLow) className = this.lowClass;
+        else if (formatter.isMedium) className = this.mediumClass;
+        else if (formatter.isHigh) className = this.highClass;
         else if (formatter.isOversaturated) {
-            className = "status-oversaturated";
+            className = this.oversaturatedClass;
             percentage = percentage - 100;
         }
 
