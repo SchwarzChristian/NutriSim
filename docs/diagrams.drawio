@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="_4Qxscl8KxDFcGghqFVp" name="Nutritions">
-        <mxGraphModel dx="660" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1118" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -92,7 +92,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="iyHQ-dwRMJEIXTPcaYET" name="Digesting">
-        <mxGraphModel dx="660" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1088" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="a6kmWVVtBok0m21uVS9C-0"/>
                 <mxCell id="a6kmWVVtBok0m21uVS9C-1" parent="a6kmWVVtBok0m21uVS9C-0"/>
@@ -156,7 +156,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="XHhh8cZ63wbK2QSTzd7u" name="Nutrition Distribution">
-        <mxGraphModel dx="660" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="455" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="GVXA5sLUDpfmoQ_hbjsg-0"/>
                 <mxCell id="GVXA5sLUDpfmoQ_hbjsg-1" parent="GVXA5sLUDpfmoQ_hbjsg-0"/>
@@ -295,6 +295,130 @@
                 </mxCell>
                 <mxCell id="MIwYS_NpD0uXDGxfr4ZM-0" value="absorbs nutritions from food" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="GVXA5sLUDpfmoQ_hbjsg-1" vertex="1">
                     <mxGeometry x="100" y="40" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="nZHelqwqaJNGebPSHAN8" name="Nutrition Exchange (draft)">
+        <mxGraphModel dx="596" dy="401" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-0"/>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-1" parent="ZoHhBnhLsmdrGZ0Nxt36-0"/>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-51" style="edgeStyle=none;html=1;endArrow=diamondThin;endFill=1;endSize=15;strokeWidth=1;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" source="ZoHhBnhLsmdrGZ0Nxt36-14" target="ZoHhBnhLsmdrGZ0Nxt36-46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-14" value="NutritionExchange" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" vertex="1">
+                    <mxGeometry x="540" y="346" width="200" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-15" value="+ bloodSystem: BloodSystem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-14" vertex="1">
+                    <mxGeometry y="26" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-17" value="+ organs: IOrgan[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-14" vertex="1">
+                    <mxGeometry y="52" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-14" vertex="1">
+                    <mxGeometry y="78" width="200" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-32" style="edgeStyle=none;html=1;dashed=1;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" source="ZoHhBnhLsmdrGZ0Nxt36-22" target="ZoHhBnhLsmdrGZ0Nxt36-26" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="312.5448028673836" y="312.0000000000001" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-39" style="edgeStyle=none;html=1;endArrow=diamondThin;endFill=0;strokeWidth=1;endSize=15;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" source="ZoHhBnhLsmdrGZ0Nxt36-22" target="ZoHhBnhLsmdrGZ0Nxt36-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-45" style="edgeStyle=none;html=1;endArrow=diamondThin;endFill=1;endSize=15;strokeWidth=1;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" source="ZoHhBnhLsmdrGZ0Nxt36-22" target="ZoHhBnhLsmdrGZ0Nxt36-41" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-22" value="IOrgan" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" vertex="1">
+                    <mxGeometry x="80" y="320" width="240" height="138" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-19" value="+ neededNutritions: NutritionTable" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-22" vertex="1">
+                    <mxGeometry y="26" width="240" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-20" value="+ unwantedNutritions: NutritionTable" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-22" vertex="1">
+                    <mxGeometry y="52" width="240" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-22" vertex="1">
+                    <mxGeometry y="78" width="240" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-21" value="+ deliverNutritions(NutritionTable): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-22" vertex="1">
+                    <mxGeometry y="86" width="240" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-33" value="+ takeNutritions(NutritionTable): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-22" vertex="1">
+                    <mxGeometry y="112" width="240" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-26" value="NutritionTable" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" vertex="1">
+                    <mxGeometry x="120" y="520" width="160" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-7" value="+ carbohytrate: Mass" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-26" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-8" value="+ fat: Mass " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-26" vertex="1">
+                    <mxGeometry y="52" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-9" value="+ protein: Mass" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-26" vertex="1">
+                    <mxGeometry y="78" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-27" value="+ vitamin: Mass" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-26" vertex="1">
+                    <mxGeometry y="104" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-30" value="+ Mineral: Mass" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-26" vertex="1">
+                    <mxGeometry y="130" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-31" value="+ Water: Mass" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-26" vertex="1">
+                    <mxGeometry y="156" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-28" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-26" vertex="1">
+                    <mxGeometry y="182" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-40" style="edgeStyle=none;html=1;endArrow=diamondThin;endFill=0;endSize=15;strokeWidth=1;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" source="ZoHhBnhLsmdrGZ0Nxt36-34" target="ZoHhBnhLsmdrGZ0Nxt36-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-52" style="edgeStyle=none;html=1;endArrow=block;endFill=1;endSize=15;strokeWidth=1;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" source="ZoHhBnhLsmdrGZ0Nxt36-34" target="ZoHhBnhLsmdrGZ0Nxt36-22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-53" style="edgeStyle=none;html=1;endArrow=diamondThin;endFill=1;endSize=15;strokeWidth=1;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" source="ZoHhBnhLsmdrGZ0Nxt36-34" target="ZoHhBnhLsmdrGZ0Nxt36-41" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-34" value="BloodSystem" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" vertex="1">
+                    <mxGeometry x="360" y="220" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-35" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-34" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-36" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-34" vertex="1">
+                    <mxGeometry y="52" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-50" style="edgeStyle=none;html=1;endArrow=diamondThin;endFill=1;endSize=15;strokeWidth=1;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" source="ZoHhBnhLsmdrGZ0Nxt36-41" target="ZoHhBnhLsmdrGZ0Nxt36-46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-41" value="Player" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" vertex="1">
+                    <mxGeometry x="100" y="80" width="200" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-42" value="+ bloodSystem: BloodSystem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-41" vertex="1">
+                    <mxGeometry y="26" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="FWNO7gpI0AaUDptKHNfb-1" value="+ { organ }: IOrgan" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ZoHhBnhLsmdrGZ0Nxt36-41">
+                    <mxGeometry y="52" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-43" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-41" vertex="1">
+                    <mxGeometry y="78" width="200" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-46" value="Engine" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="ZoHhBnhLsmdrGZ0Nxt36-1" vertex="1">
+                    <mxGeometry x="520" y="80" width="240" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-47" value="+ player: Player" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-46" vertex="1">
+                    <mxGeometry y="26" width="240" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-49" value="+ nutritionExchange: NutritionExchange" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-46" vertex="1">
+                    <mxGeometry y="52" width="240" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZoHhBnhLsmdrGZ0Nxt36-48" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="ZoHhBnhLsmdrGZ0Nxt36-46" vertex="1">
+                    <mxGeometry y="78" width="240" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="FWNO7gpI0AaUDptKHNfb-2" value="Explanation in&lt;br&gt;nutritionTransport.md" style="html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="ZoHhBnhLsmdrGZ0Nxt36-1">
+                    <mxGeometry x="320" y="10" width="160" height="50" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
