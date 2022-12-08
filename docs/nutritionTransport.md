@@ -3,26 +3,30 @@ see also: diagrams.drawio / Nutrition Exchange
 ## Setup
 * `Player`
 	* belongs to `Engine`
+	* has one `BloodSystem`
+	* has many `IOrgan`
 	* entity holding player data
 * `Engine`
-	* owns `Player` instance
-	* owns `Nutrition` Exchange
+	* has one `Player` instance
+	* has one `NutritionExchange`
 	* Manages setup and timing
 * `BloodSystem`
 	* is a `IOrgan`
-	* belongs to `Player`
 	* main organ for nutrition exchange
 * `IOrgan`
-	* ToDo: entity, should not contain methods
-	* belongs to `Player`
 	* interface for all organs
 	* needs to be implemented in order to participate in nutrition exchange
 * `NutritionExchange`
-	* belongs to `Engine`
-	* references `BloodSystem`
-	* references multiple `IOrgan`
-	* calculates nutrition transportation needs when requested by engine
+	* references one `BloodSystem`
+	* has many `INutritionManager`
+	* calculates nutrition transportation needs when requested by `Engine`
+	* calculates nutrition transportation as needed by `INutritionManager`s
 	* executes nutrition transport when requested by engine
+* `INutritionManager`
+	* references one `IOrgan`
+	* manages resource needs of `IOrgan`
+	* communicates resource needs to `NutritionExchange`
+	* handles nutrition transport for `IOrgan`
 ## Tick Update
 ### Phase 1: Requests
 - organs request needed nutritions at blood system
