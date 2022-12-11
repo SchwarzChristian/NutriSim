@@ -10,21 +10,9 @@ export default class ExportApi {
         this.player = player;
     }
     
-    public async getActions(): Promise<Action[]> {
-        return [
-            { name: "Eat" },
-            { name: "Sleep" },
-            { name: "Work" },
-            { name: "Play" },
-            { name: "Study" },
-            { name: "Exercise" },
-            { name: "Socialize" },
-            { name: "Meditate" },
-            { name: "Read" },
-            { name: "Watch TV" },
-        ];
-        //const response = await axios.get<Action[]>(this.endpoint);
-        //return response.data;
+    public async getActions(): Promise<string[]> {
+        const response = await axios.get<string[]>(this.endpoint);
+        return response.data;
     }
 
     public async startAction(action: Action): Promise<void> {
