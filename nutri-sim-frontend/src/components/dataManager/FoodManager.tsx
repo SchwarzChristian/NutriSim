@@ -22,6 +22,8 @@ export default class FoodManager extends React.Component<Props> {
 		super(props);
 
 		this.createFood = this.createFood.bind(this);
+		this.deleteFood = this.deleteFood.bind(this);
+		this.buildRow = this.buildRow.bind(this);
 	}
 
 	public render() {
@@ -72,7 +74,7 @@ export default class FoodManager extends React.Component<Props> {
 			<Td>{formatter.format(food.nutritions.mineral)}</Td>
 			<Td>{formatter.format(food.nutritions.water)}</Td>
 			<Td>
-				<Button onClick={() => this.foodApi.deleteFood(food)}>
+				<Button onClick={() => this.deleteFood(food.name)}>
 					Delete
 				</Button>
 			</Td>
@@ -92,7 +94,11 @@ export default class FoodManager extends React.Component<Props> {
 			}
 		};
 
-		this.foodApi.addFood(food).then(() => this.updateFoodList());
+		this.foodApi.addFood(food).then(this.updateFoodList);
+	}
+
+	private deleteFood(foodName: string) {
+		this.foodApi.deleteFood(foodName).then(this.updateFoodList);
 	}
 
 	private updateFoodList() {

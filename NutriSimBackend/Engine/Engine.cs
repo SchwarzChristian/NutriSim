@@ -3,41 +3,47 @@ using NutriSimBackend.Entities;
 
 namespace NutriSimBackend.Engine;
 
-internal class Game
+internal class Engine
 {
 	public Player Player { get; private set; }
 
 	private string saveGameFilename;
 
-	public static Game CreateGame(string playerName) {
-		if (File.Exists(playerName)) {
+	public static Engine CreateGame(string playerName)
+	{
+		if (File.Exists(playerName))
+		{
 			var filename = $"save/{playerName}.json";
-			return Game.LoadGame(filename);
+			return Engine.LoadGame(filename);
 		}
 
-		var game = new Game(new Player { Name = playerName });
+		var game = new Engine(new Player { Name = playerName });
 		game.Save();
 		return game;
 	}
 
-	public static Game LoadGame(string filename) {
-		if (!File.Exists(filename)) {
+	public static Engine LoadGame(string filename)
+	{
+		if (!File.Exists(filename))
+		{
 			throw new FileNotFoundException($"File '{filename}' not found");
 		}
-		
+
 		var fileContent = File.ReadAllText(filename);
 		var player = JsonSerializer.Deserialize<Player>(fileContent) ??
 			throw new InvalidOperationException($"failed to read {filename}");
 
-		return new Game(player);
+		return new Engine(player);
 	}
 
-	public Game(Player player) {
+	public Engine(Player player)
+	{
 		Player = player;
 		saveGameFilename = $"save/{player.Name}.json";
 	}
 
-	public void Save() {
+	public void Save()
+	{
 		if (!Directory.Exists("save"))
 		{
 			Directory.CreateDirectory("save");

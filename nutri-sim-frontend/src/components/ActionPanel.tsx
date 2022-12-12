@@ -2,7 +2,7 @@ import { Grid, GridItem, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import Action from "../entities/Action";
 import Player from "../entities/Player";
-import ActionsApi from "../utils/backendApi/ActionsApi";
+import ActionApi from "../utils/backendApi/ActionApi";
 import { fu } from "../utils/componentUtils";
 
 interface IProps {
@@ -11,7 +11,7 @@ interface IProps {
 
 export default class ActionPanel extends React.Component<IProps> {
     private actions?: Action[];
-    private actionsApi: ActionsApi = new ActionsApi(this.props.player);
+    private actionsApi: ActionApi = new ActionApi(this.props.player);
 
     public render() {
         if (this.actions === undefined) {

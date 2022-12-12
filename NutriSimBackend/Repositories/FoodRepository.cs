@@ -45,8 +45,12 @@ public class FoodRepository
 		throw new InvalidOperationException($"Food '{foodName}' not found");
 	}
 
-	public void UpdateFood(Food food) {
+	public void AddOrUpdateFood(Food food) {
 		foods[food.Name] = food;
+	}
+
+	public void DeleteFood(string foodName) {
+		foods.Remove(foodName);
 	}
 
 	public ICollection<string> GetFoodNames() {
@@ -59,7 +63,13 @@ public class FoodRepository
 		}
 
 		var filename = "data/foods.json";
-		var json = JsonSerializer.Serialize(new JsonList<Food> { Data = foods.Values });
+		var json = JsonSerializer.Serialize(new JsonList<Food>(CleanFoods(foods).Values));
 		File.WriteAllText(filename, json);
+	}
+
+	private IDictionary<string, Food> CleanFoods(IDictionary<string, Food> foods) {
+		return foods
+			.Where(f => !f.Value.Name.StartsWith("test-"))
+			.ToDictionary(f => f.Key, f => f.Value);
 	}
 }

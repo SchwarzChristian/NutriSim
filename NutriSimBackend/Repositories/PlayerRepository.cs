@@ -51,14 +51,6 @@ internal class PlayerRepository
 		Save();
 	}
 
-	private void Save() {
-		foreach (var player in players.Values)
-		{
-			var serialized = JsonSerializer.Serialize(player);
-			File.WriteAllText($"save/{player.Name}.json", serialized);
-		}
-	}
-
 	internal ICollection<string> GetPlayerNames()
 	{
 		return players.Keys;
@@ -70,5 +62,19 @@ internal class PlayerRepository
 		var filename = $"save/{playerName}.json";
 		if (File.Exists(filename)) File.Delete(filename);
 		Save();
+	}
+
+	private void Save() {
+		foreach (var player in CleanPlayers(players).Values)
+		{
+			var serialized = JsonSerializer.Serialize(player);
+			File.WriteAllText($"save/{player.Name}.json", serialized);
+		}
+	}
+
+	private IDictionary<string, Player> CleanPlayers(IDictionary<string, Player> players) {
+		return players
+			.Where(p => !p.Value.Name.StartsWith("test-"))
+			.ToDictionary(p => p.Key, p => p.Value);
 	}
 }

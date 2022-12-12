@@ -9,8 +9,8 @@ export default class FoodApi {
 		return response.data;
 	}
 
-	public async deleteFood(food: Food): Promise<void> {
-		await axios.delete(`${this.apiEndpoint}/${food.name}`);
+	public async deleteFood(foodName: string): Promise<void> {
+		await axios.delete(`${this.apiEndpoint}/${foodName}`);
 	}
 
 	public async addFood(food: Food): Promise<void> {

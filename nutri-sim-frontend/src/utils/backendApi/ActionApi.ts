@@ -2,7 +2,7 @@ import axios from "axios";
 import Action from "../../entities/Action";
 import Player from "../../entities/Player";
 
-export default class ExportApi {
+export default class ActionApi {
     private endpoint: string = "http://localhost:5169/action";
     private player: Player;
 
@@ -10,8 +10,8 @@ export default class ExportApi {
         this.player = player;
     }
     
-    public async getActions(): Promise<string[]> {
-        const response = await axios.get<string[]>(this.endpoint);
+	public async getActions(): Promise<Action[]> {
+        const response = await axios.get<Action[]>(this.endpoint);
         return response.data;
     }
 

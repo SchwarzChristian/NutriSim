@@ -18,8 +18,14 @@ public class FoodController : ControllerBase {
 	}
 
 	[HttpPost]
-	public void PostFood([FromBody] Food food) {
-		FoodRepository.Instance.UpdateFood(food);
+	public void AddOrUpdateFood([FromBody] Food food) {
+		FoodRepository.Instance.AddOrUpdateFood(food);
+		FoodRepository.Instance.Save();
+	}
+
+	[HttpDelete("{foodName}")]
+	public void DeleteFood(string foodName) {
+		FoodRepository.Instance.DeleteFood(foodName);
 		FoodRepository.Instance.Save();
 	}
 }

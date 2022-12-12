@@ -2,7 +2,7 @@ import { randomUUID } from "crypto";
 import PlayerApi from "../../../../utils/backendApi/PlayerApi";
 
 const api = new PlayerApi();
-const testPlayerName = "integration-tester-" + randomUUID();
+const testPlayerName = "test-player-" + randomUUID();
 
 beforeAll(async () => {
 	await api.getPlayer(testPlayerName);
